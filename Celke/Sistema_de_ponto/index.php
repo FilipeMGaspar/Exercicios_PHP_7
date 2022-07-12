@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de ponto para cadastrar horário de entrada e saída com PHP - Celke</title>
 </head>
 <body>
-    
+    <h2>Registar Ponto</h2>
+
+    <a href="registar_ponto.php">Registar</a>
 </body>
 </html>
