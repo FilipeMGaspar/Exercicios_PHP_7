@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Registar Ponto</h2>
-
+    <p><?php echo date("d/m/Y - H:m:s") ?></p>
     <a href="registar_ponto.php">Registar</a>
 </body>
 </html>
