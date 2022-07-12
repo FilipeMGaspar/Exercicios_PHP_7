@@ -9,4 +9,4 @@ function atualizarHorario(){
     apHorario.innerHTML = formatarData
 }
 
-setInterval(atualizarHorario(), 1000); // Chama a função a cad segundo
+setInterval(atualizarHorario, 1000); // Chama a função a cad segundo
