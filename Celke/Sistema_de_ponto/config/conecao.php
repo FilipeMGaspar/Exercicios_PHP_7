@@ -7,9 +7,13 @@ $user = "root";
 $pass = "";
 
 try {
-    //Coneção com utilização de porta utp
+    // Conexão com utilização de porta utp
     $conn = new PDO("mysql:host=$host;port=port;dbname=$dbname", $user, $pass);
+
+    // Conexão sem porta UTP
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+
     echo "Ligação á base de dados efectuada com sucesso";
 } catch (PDOException $err){
-    echo "Erro: Conexão com banco de dados não realizado com sucesso.<br>Erro gerado ". $err->getMessage();
+    echo "Erro: Ligação á base de dados não foi realizada com sucesso.<br>Ocorreu o seguinte erro ..: ". $err->getMessage();
 }
