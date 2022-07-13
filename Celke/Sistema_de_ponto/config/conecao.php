@@ -11,7 +11,7 @@ try {
     $conn = new PDO("mysql:host=$host;port=port;dbname=$dbname", $user, $pass);
 
     // Conexão sem porta UTP
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+     //  $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 
     echo "Ligação á base de dados efectuada com sucesso";
 } catch (PDOException $err){
