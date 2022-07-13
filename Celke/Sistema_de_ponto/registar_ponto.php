@@ -11,3 +11,4 @@
     $data_entrada = date("Y/m/d");
 
     // Incluir a conexão á base de dados 
+    require_once "config/conecao.php";
