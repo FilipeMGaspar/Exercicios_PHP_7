@@ -7,8 +7,8 @@ $user = "root";
 $pass = "";
 
 try {
-    // Conexão com utilização de porta utp
-     // $conn = new PDO("mysql:host=$host;port=port;dbname=$dbname", $user, $pass);
+        // Conexão com utilização de porta utp
+        // $conn = new PDO("mysql:host=$host;port=port;dbname=$dbname", $user, $pass);
 
     // Conexão sem porta UTP
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
