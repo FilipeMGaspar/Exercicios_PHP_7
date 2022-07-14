@@ -47,3 +47,10 @@
     } else {
         echo "Não foi encontardo nenhum registo de ponto!";
     }
+
+    // Verificar o tipo de registo de NOVO PONTO ou EDITAR registo existente
+    switch($tipo_registo) {
+        case "editar" :
+
+        break;
+    }
