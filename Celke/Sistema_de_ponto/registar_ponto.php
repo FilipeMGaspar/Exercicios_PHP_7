@@ -17,4 +17,4 @@
     $id_usuario = 1;
 
     //Recuperar o ultimo ponto do usuario
-    
+    $query = "SELECT id, saida_intervalo, retorno_intervalo, saida FROM pontos WHERE ";
