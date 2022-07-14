@@ -8,7 +8,7 @@ CREATE TABLE usuarios (
   email varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE ponto (
+CREATE TABLE pontos (
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   data_entrada date NULL,
   entrada time DEFAULT NULL,
