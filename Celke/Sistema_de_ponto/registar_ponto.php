@@ -17,4 +17,10 @@
     $id_usuario = 1;
 
     //Recuperar o ultimo ponto do usuario
-    $query = "SELECT id, saida_intervalo, retorno_intervalo, saida FROM pontos WHERE usuario_id=:usuario_id";
+    $query_ponto = "SELECT id, saida_intervalo, retorno_intervalo, saida FROM pontos WHERE usuario_id=:usuario_id ORDER BY id DESC LIMIT 1"; // No máximo 1 registo
+
+    //Preparar a Query
+    $result_ponto = $conn->prepare($query_ponto);
+
+    // subtituir o link da query pelo valor
+    $result_ponto->bindParam(":usuario_id", $id_usuario);
