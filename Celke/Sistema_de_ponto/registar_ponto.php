@@ -12,3 +12,6 @@
 
     // Incluir a conexão á base de dados 
     require_once "config/conecao.php";
+
+    // ID do usuario fixo para testar
+    $id_usuario = 1;
