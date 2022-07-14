@@ -15,3 +15,6 @@
 
     // ID do usuario fixo para testar
     $id_usuario = 1;
+
+    //Recuperar o ultimo ponto do usuario
+    
