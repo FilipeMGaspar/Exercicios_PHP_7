@@ -24,3 +24,13 @@
 
     // subtituir o link da query pelo valor
     $result_ponto->bindParam(":usuario_id", $id_usuario);
+
+    //Executar a Query
+    $result_ponto->execute();
+
+    if(($result_ponto) && ($result_ponto->rowCount() != 0)){
+        $row = $result_ponto->fetch(PDO::FETCH_ASSOC);
+        var_dump($row);
+    } else {
+
+    }
