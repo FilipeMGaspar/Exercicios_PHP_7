@@ -28,9 +28,22 @@
     //Executar a Query
     $result_ponto->execute();
 
+    //Verificar se encontrou algum registo na base de dados
     if(($result_ponto) && ($result_ponto->rowCount() != 0)){
-        $row = $result_ponto->fetch(PDO::FETCH_ASSOC);
-        var_dump($row);
+        //Realizar a leitura do registo
+        $row_ponto = $result_ponto->fetch(PDO::FETCH_ASSOC);
+        var_dump($row_ponto);
+
+        // Extrair para imprimir através do nome da chave no array
+        extract($row_ponto);
+
+        // verificar se o utilizador já deu saida para o interbvalo 
+        if (($saida_intervalo == "") || ($saida_intervalo == null)) {
+            $col_tipo_registo = "saida_intervalo"; // nome da coluna a modificar
+            $tipo_registo = "editar"; // ação a ser efetuda na tabela
+            $text_tipo_registo = "Saida para intervalo"; // Texto a ser apresentado ao utilizador 
+        }
+
     } else {
         echo "Não foi encontardo nenhum registo de ponto!";
     }
