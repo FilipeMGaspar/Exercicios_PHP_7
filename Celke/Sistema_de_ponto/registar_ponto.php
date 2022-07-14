@@ -32,5 +32,5 @@
         $row = $result_ponto->fetch(PDO::FETCH_ASSOC);
         var_dump($row);
     } else {
-
+        echo "Não foi encontardo nenhum registo de ponto!";
     }
