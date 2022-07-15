@@ -79,7 +79,7 @@
 
         default:
             // Query para adicionar registo na base da dados
-            
+            $query = "INSERT INTO pontos (data_entrada, entrada, usuario_id) VALUES (:data_entrada, :entrada, :usuario_id)";
         break;
     }
 
