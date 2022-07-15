@@ -86,7 +86,8 @@
 
             // subtituir o link da query pelo valor
             $cad_horario->bindParam(":data_entrada", $data_entrada);
-            $cad_horario->bindParam(":entrada", );
+            $cad_horario->bindParam(":entrada", $horario_atual);
+            $cad_horario->bindParam(":usuario_id", $id_usuario);
         break;
     }
 
