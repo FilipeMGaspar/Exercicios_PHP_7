@@ -1,6 +1,6 @@
 <?php
     session_start(); // Iniciar sessão
-    
+
         //Definição do fuso horário padrão 
     	date_default_timezone_set("Europe/Lisbon");
 ?>
@@ -14,6 +14,11 @@
 </head>
 <body>
     <h2>Registar Ponto</h2>
+
+    <?php
+         $_SESSION['msg']
+    ?>
+
     <p id="horario"><?php echo date("d/m/Y - H:m:s") ?></p>
     <a href="registar_ponto.php">Registar</a>
 
