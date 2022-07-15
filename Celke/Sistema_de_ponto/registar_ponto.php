@@ -42,11 +42,19 @@
             $col_tipo_registo = "saida_intervalo"; // nome da coluna a modificar
             $tipo_registo = "editar"; // ação a ser efetuda na tabela
             $text_tipo_registo = "Saida para intervalo"; // Texto a ser apresentado ao utilizador 
-        } elseif (($retorno_intervalo == "") || ($retorno_intervalo == null)) { // Verifica se o utilizador deu entrada do intervalo
+        } elseif (($retorno_intervalo == "") || ($retorno_intervalo == null)) { // Verifica se o utilizador deu entrada/retorno do intervalo
             $col_tipo_registo = "retorno_intervalo"; // nome da coluna a modificar
             $tipo_registo = "editar"; // ação a ser efetuda na tabela
             $text_tipo_registo = "Retorno do intervalo"; // Texto a ser apresentado ao utilizador 
-        } 
+        } elseif (($saida == "") || ($saida == null)) { // Verifica se o utilizador deu saida 
+            $col_tipo_registo = "saida"; // nome da coluna a modificar
+            $tipo_registo = "editar"; // ação a ser efetuda na tabela
+            $text_tipo_registo = "Saida"; // Texto a ser apresentado ao utilizador 
+        } else { // Cria novo registo na base de dados com horário de entrada, se o utilizador não possuir nenhum registo de entrada
+        
+            $tipo_registo = "entrada"; // ação a ser efetuda na tabela
+            $text_tipo_registo = "Entrada"; // Texto a ser apresentado ao utilizador 
+        }
 
     } else {
         echo "Não foi encontardo nenhum registo de ponto!";
@@ -67,6 +75,11 @@
 
              // subtituir o link da query pelo valor
              $cad_horario->bindParam(":id", $id_ponto);
+        break;
+
+        default:
+            // Query para adicionar registo na base da dados
+            
         break;
     }
 
