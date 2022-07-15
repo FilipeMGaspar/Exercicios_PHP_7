@@ -61,7 +61,9 @@
         }
 
     } else {
-        echo "Não foi encontardo nenhum registo de ponto!";
+       // echo "Não foi encontardo nenhum registo de ponto!";
+       $tipo_registo = "entrada"; // ação a ser efetuda na tabela
+       $text_tipo_registo = "Entrada"; // Texto a ser apresentado ao utilizador
     }
 
     // Verificar o tipo de registo de NOVO PONTO ou EDITAR registo existente
