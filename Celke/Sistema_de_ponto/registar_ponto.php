@@ -38,15 +38,15 @@
         extract($row_ponto);
 
         // verificar se o utilizador já deu saida para o interbvalo 
-        if (($retorno_intervalo == "") || ($retorno_intervalo == null)) {
-            $col_tipo_registo = "retorno_intervalo"; // nome da coluna a modificar
-            $tipo_registo = "editar"; // ação a ser efetuda na tabela
-            $text_tipo_registo = "Retorno do intervalo"; // Texto a ser apresentado ao utilizador 
-        } elseif (($saida_intervalo == "") || ($saida_intervalo == null)) { // Verifica se o utilizador deu entrada do intervalo
+        if (($saida_intervalo == "") || ($saida_intervalo == null)) {
             $col_tipo_registo = "saida_intervalo"; // nome da coluna a modificar
             $tipo_registo = "editar"; // ação a ser efetuda na tabela
             $text_tipo_registo = "Saida para intervalo"; // Texto a ser apresentado ao utilizador 
-        }
+        } elseif (($retorno_intervalo == "") || ($retorno_intervalo == null)) { // Verifica se o utilizador deu entrada do intervalo
+            $col_tipo_registo = "retorno_intervalo"; // nome da coluna a modificar
+            $tipo_registo = "editar"; // ação a ser efetuda na tabela
+            $text_tipo_registo = "Retorno do intervalo"; // Texto a ser apresentado ao utilizador 
+        } 
 
     } else {
         echo "Não foi encontardo nenhum registo de ponto!";
