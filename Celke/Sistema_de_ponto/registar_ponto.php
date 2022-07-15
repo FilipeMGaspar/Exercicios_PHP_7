@@ -1,4 +1,8 @@
 <?php
+    session_start(); // Iniciar sessão
+
+    ob_start(); // Limpar o buffer
+
     //Definição do fuso horário padrão 
     date_default_timezone_set("Europe/Lisbon");
 
@@ -96,7 +100,9 @@
 
     // Acessa o if quando registo efectudao com sucesso
     if($cad_horario->rowCount()){
-        echo "<p style='color: green;'>Horário de $text_tipo_registo registado com sucesso!</p>";
+        $_SESSION['msg'] = "<p style='color: green;'>Horário de $text_tipo_registo registado com sucesso!</p>";
+        header("Location: index.php");
     } else {
-        echo "<p style='color: #f00;'>Horário de $text_tipo_registo não foi registado!</p>";
+        $_SESSION['msg'] = "<p style='color: #f00;'>Horário de $text_tipo_registo não foi registado!</p>";
+        header("Location: index.php");
     }
