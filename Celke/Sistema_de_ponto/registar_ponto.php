@@ -79,7 +79,14 @@
 
         default:
             // Query para adicionar registo na base da dados
-            $query = "INSERT INTO pontos (data_entrada, entrada, usuario_id) VALUES (:data_entrada, :entrada, :usuario_id)";
+            $query_horario = "INSERT INTO pontos (data_entrada, entrada, usuario_id) VALUES (:data_entrada, :entrada, :usuario_id)";
+
+            //Preparar a Query
+            $cad_horario = $conn->prepare($query_horario);
+
+            // subtituir o link da query pelo valor
+            $cad_horario->bindParam(":data_entrada", $data_entrada);
+            $cad_horario->bindParam(":entrada", );
         break;
     }
 
