@@ -50,7 +50,8 @@
 
     // Verificar o tipo de registo de NOVO PONTO ou EDITAR registo existente
     switch($tipo_registo) {
+        //Acessa o case quando deve editar o registo
         case "editar" :
-
+            
         break;
     }
