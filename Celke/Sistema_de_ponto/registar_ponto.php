@@ -5,7 +5,7 @@
 
     // Gerar com PHP o horário atual
     $horario_atual = date("H:i:s");
-    var_dump($horario_atual);
+    //var_dump($horario_atual);
 
     // Gerar data com PHP da mesma forma que deve ser guardado na base de dados Ano/Mês/Dia
     $data_entrada = date("Y/m/d");
@@ -32,7 +32,7 @@
     if(($result_ponto) && ($result_ponto->rowCount() != 0)){
         //Realizar a leitura do registo
         $row_ponto = $result_ponto->fetch(PDO::FETCH_ASSOC);
-        var_dump($row_ponto);
+        //var_dump($row_ponto);
 
         // Extrair para imprimir através do nome da chave no array
         extract($row_ponto);
