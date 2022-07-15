@@ -1,4 +1,6 @@
 <?php
+    session_start(); // Iniciar sessão
+    
         //Definição do fuso horário padrão 
     	date_default_timezone_set("Europe/Lisbon");
 ?>
