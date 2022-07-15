@@ -17,7 +17,7 @@
     $id_usuario = 1;
 
     //Recuperar o ultimo ponto do usuario
-    $query_ponto = "SELECT id, saida_intervalo, retorno_intervalo, saida FROM pontos WHERE usuario_id=:usuario_id ORDER BY id DESC LIMIT 1"; // No máximo 1 registo
+    $query_ponto = "SELECT id AS id_ponto, saida_intervalo, retorno_intervalo, saida FROM pontos WHERE usuario_id=:usuario_id ORDER BY id DESC LIMIT 1"; // No máximo 1 registo
 
     //Preparar a Query
     $result_ponto = $conn->prepare($query_ponto);
@@ -52,6 +52,19 @@
     switch($tipo_registo) {
         //Acessa o case quando deve editar o registo
         case "editar" :
-            
+            // query paraeditar na base de dados
+            $query_horario =  "UPDATE pontos SET $col_tipo_registo=:horario_atual WHERE id=:id LIMIT 1"; // no máximo afeta um registo
+
+            //Prepara a query;
+            $cad_horario = $conn->prepare($query_horario);
+
+            // subtituir o link da query pelo valor
+            $cad_horario->bindParam(":horario_atual", $horario_atual);
+
+             // subtituir o link da query pelo valor
+             $cad_horario->bindParam(":id", $id_ponto);
         break;
     }
+
+    //Execução da query
+    $cad_horario->execute();
