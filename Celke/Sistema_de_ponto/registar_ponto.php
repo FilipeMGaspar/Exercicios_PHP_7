@@ -71,7 +71,7 @@
 
     // Acessa o if quando registo efectudao com sucesso
     if($cad_horario->rowCount()){
-        echo "Horário de $text_tipo_registo registado com sucesso!";
+        echo "<p style='color: green;'>Horário de $text_tipo_registo registado com sucesso!</p>";
     } else {
-
+        echo "<p style='color: #f00;'>Horário de $text_tipo_registo não foi registado!</p>";
     }
