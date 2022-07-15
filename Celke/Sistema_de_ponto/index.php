@@ -16,7 +16,10 @@
     <h2>Registar Ponto</h2>
 
     <?php
-         $_SESSION['msg']
+         if (isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+         }
     ?>
 
     <p id="horario"><?php echo date("d/m/Y - H:m:s") ?></p>
