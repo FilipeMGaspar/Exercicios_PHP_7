@@ -68,3 +68,10 @@
 
     //Execução da query
     $cad_horario->execute();
+
+    // Acessa o if quando registo efectudao com sucesso
+    if($cad_horario->rowCount()){
+        echo "Horário de " .  $text_tipo_registo;
+    } else {
+
+    }
