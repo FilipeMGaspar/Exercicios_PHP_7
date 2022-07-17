@@ -5,3 +5,7 @@
    $username = "filipe"; 
    $password = "teste123";
    $bDados = "contas";
+
+   // $conn = new mysqli ("hostname", "username", "password", "Base_de_Dados");
+
+   $ligaBdados = new mysqli($hostname, $username, $password, $bDados);
