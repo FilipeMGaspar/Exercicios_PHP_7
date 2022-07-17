@@ -9,3 +9,5 @@ Crie uma tabela de nome cobradores na base de dados praticaphp utilzando o mysql
         Chave primária codigo
 
 */
+
+//Ligação á base de dados com mysqli
