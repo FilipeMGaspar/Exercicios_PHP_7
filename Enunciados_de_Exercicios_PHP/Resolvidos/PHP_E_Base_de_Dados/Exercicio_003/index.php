@@ -6,6 +6,7 @@ Crie uma tabela de nome fornecedores na base de dados praticaphp utilzando o mys
     codigo	Inteiro  auto incremento 
     nome	Carater (50) não pode ser nulo
     email	Caracter (50)
+    descricao texto
         Chave primária codigo
 
 */
