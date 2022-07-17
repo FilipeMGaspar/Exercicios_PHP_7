@@ -9,3 +9,11 @@ Crie uma tabela de nome fornecedores na base de dados praticaphp utilzando o mys
         Chave primária codigo
 
 */
+
+//Ligação á base de dados
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $bd = "praticaphp";
+
+    $conn = new mysqli($host, $user, $pass, $bd);
