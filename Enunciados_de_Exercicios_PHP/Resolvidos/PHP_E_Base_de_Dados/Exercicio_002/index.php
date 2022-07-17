@@ -3,4 +3,4 @@
 
     // $conn = new mysqli("hostname", "username", "password", "Base_de_dados")
 
-    $ligaBD = new mysqli("localhost");
+    $ligaBD = new mysqli("localhost", "filipe", "teste123", "contas");
