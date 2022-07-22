@@ -20,7 +20,7 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 $query = "CREATE TABLE cobradores (
     idconta INT AUTO_INCREMENT PRIMARY KEY,
-    nome	VARCHAR(50), 
+    nome VARCHAR(50), 
     servico VARCHAR(50),
     custo decimal
 );";
