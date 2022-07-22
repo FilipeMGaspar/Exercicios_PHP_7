@@ -14,5 +14,5 @@ Crie uma tabela de nome cobradores na base de dados praticaphp utilzando o mysql
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "";
+$db = "contas";
 
