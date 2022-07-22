@@ -25,5 +25,5 @@ $query = "CREATE TABLE cobradores (
     custo DECIMAL(19 , 4 ) NOT NULL
 );";
 
-echo "$query";
-//$conn->query($query); // Execução da Query
+
+$conn->query($query); // Execução da Query
