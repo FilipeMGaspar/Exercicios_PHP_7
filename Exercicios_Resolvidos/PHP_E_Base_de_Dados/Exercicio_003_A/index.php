@@ -17,3 +17,13 @@ $pass = "";
 $db = "contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
+
+$query = "CREATE TABLE cobradores (
+    idconta INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL, 
+    servico VARCHAR(50) NOT NULL,
+    custo DECIMAL(19 , 4 ) NOT NULL
+);";
+
+echo "$query";
+//$conn->query($query); // Execução da Query
