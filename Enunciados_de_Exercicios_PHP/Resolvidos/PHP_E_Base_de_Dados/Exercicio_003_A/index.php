@@ -24,3 +24,5 @@ $query = "CREATE TABLE contas (
     servico VARCHAR(50),
     custo decimal
 );";
+
+$conn->query($query); // Execução da Query
