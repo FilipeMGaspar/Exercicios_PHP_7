@@ -6,7 +6,7 @@ Insira os seguintes dados na tabela fornecedores utilizando o mysqli, sem utiliz
 codigo	      1	                            2	                     3
 nome	    Ricardo	                        João	                Maria
 email	    ricoarrigoni@gmail.com	    joao@gmail.com	         maria@gmail.com
-			
+descricao	Vende Vasouras		        Vende Jornais            Vende papeis recortados
 */
 
 // Ligação á base de dados
@@ -18,4 +18,10 @@ $bd = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $bd);
 
-//$query = "";
+$query = "INSERT INTO fornecedores (nome, email, descricao) VALUES (
+    'Ricardo', 'ricoarrigoni@gmail.com', 'Vende Vasouras',
+    'João', 'joao@gmail.com', 'Vende Jornais ',
+    'Maria', 'maria@gmail.com', 'Vende papeis recortados'
+);";
+
+$conn->query($query);
