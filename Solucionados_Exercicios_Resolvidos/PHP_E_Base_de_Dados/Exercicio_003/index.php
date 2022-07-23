@@ -21,7 +21,7 @@ Crie uma tabela de nome fornecedores na base de dados praticaphp utilzando o mys
 
     //Criação da tabela fornecedores
     $query = "CREATE TABLE fornecedores (
-        codigo INT AUTO_INCREMENT PRIMARY KEY,
+        codigo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         nome VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
         descricao TEXT
