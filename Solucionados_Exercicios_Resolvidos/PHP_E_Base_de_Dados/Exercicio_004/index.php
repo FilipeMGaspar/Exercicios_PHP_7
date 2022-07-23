@@ -15,3 +15,7 @@ $host = "localhost";
 $user = "filipe";
 $pass = "teste123";
 $bd = "praticaphp";
+
+$conn = new mysqli($host, $user, $pass, $bd);
+
+//$query = "";
