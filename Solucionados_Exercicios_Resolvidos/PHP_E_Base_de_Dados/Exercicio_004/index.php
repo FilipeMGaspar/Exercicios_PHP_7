@@ -8,3 +8,10 @@ nome	    Ricardo	                        João	                Maria
 email	    ricoarrigoni@gmail.com	    joao@gmail.com	         maria@gmail.com
 			
 */
+
+// Ligação á base de dados
+
+$host = "localhost";
+$user = "filipe";
+$pass = "teste123";
+$bd = "praticaphp";
