@@ -18,10 +18,20 @@ $bd = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $bd);
 
-$query = "INSERT INTO fornecedores (nome, email, descricao) VALUES (
-    'Ricardo', 'ricoarrigoni@gmail.com', 'Vende Vasouras',
-    'João', 'joao@gmail.com', 'Vende Jornais ',
-    'Maria', 'maria@gmail.com', 'Vende papeis recortados'
+
+/*
+$query = "INSERT INTO fornecedores VALUES 
+(
+    1, 'Ricardo', 'ricoarrigoni@gmail.com', 'Vende Vasouras',
+    2, 'João', 'joao@gmail.com', 'Vende Jornais ',
+    3, 'Maria', 'maria@gmail.com', 'Vende papeis recortados'
 );";
+*/
 
 $conn->query($query);
+
+/*
+    INSERT INTO fornecedores (codigo, nome, email, descricao) VALUES 
+    (1 , 'João', 'jony£mail.pt', 'asdasdasdas'), 
+    (2 , 'Josefina', 'josef@zef.pt', 'zef zef');
+*/ 
