@@ -18,5 +18,5 @@ $db = "contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-//Fecha a ligação á base de dados
+  //Fecha a ligação á base de dados Mysql
 $conn->close();
