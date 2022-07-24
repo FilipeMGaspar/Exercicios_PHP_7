@@ -15,3 +15,8 @@ $host = "localhost";
 $user  = "root";
 $pass = "";
 $db = "contas";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+//Fecha a ligação á base de dados
+$conn->close();
