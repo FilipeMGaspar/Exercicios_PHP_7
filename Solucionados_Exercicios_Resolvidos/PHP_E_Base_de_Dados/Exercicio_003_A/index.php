@@ -27,3 +27,6 @@ $query = "CREATE TABLE cobradores (
 
 
 $conn->query($query); // Execução da Query
+
+//Fecha a ligação á base de dados
+$conn->close();

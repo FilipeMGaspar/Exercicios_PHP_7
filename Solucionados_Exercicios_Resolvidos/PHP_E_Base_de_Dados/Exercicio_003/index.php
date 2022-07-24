@@ -30,3 +30,6 @@ Crie uma tabela de nome fornecedores na base de dados praticaphp utilzando o mys
     $conn->query($query); // Execução da query
 
     $conn->close(); // Fecha a ligação á base de dados
+
+    //Fecha a ligação á base de dados
+    $conn->close();
