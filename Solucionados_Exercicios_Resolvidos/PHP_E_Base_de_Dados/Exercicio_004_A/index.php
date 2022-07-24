@@ -11,6 +11,9 @@
 */
 
   //Ligação á base de dados
+
+use function PHPSTORM_META\type;
+
   $host = "localhost";
   $user  = "root";
   $pass = "";
@@ -28,10 +31,12 @@
   $servico = "Água e Saneamento";
   $custo = 27.89;
 
+  echo var_dump($custo);
+/*
   $query = "INSERT INTO cobradores (nome, servico, susto) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($query);
   $stmt->bind_param("ssd", $nome, $servico, $custo);
   $stmt->execute();
-
+*/
   //Fecha a ligação á base de dados Mysql
   $conn->close();
