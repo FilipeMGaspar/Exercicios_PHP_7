@@ -31,5 +31,5 @@ Crie uma tabela de nome fornecedores na base de dados praticaphp utilzando o mys
 
     $conn->close(); // Fecha a ligação á base de dados
 
-    //Fecha a ligação á base de dados
+    //Fecha a ligação á base de dados Mysql
     $conn->close();
