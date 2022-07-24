@@ -6,8 +6,8 @@
 
       codigo	          1	                         2	                          3
       nome	        EDP	                        NOWO	                    SMASCB
-      servico     Eletricidade	            TV + NET + TLM	         Água e saneamento
-      custo	    45.56		                    40                          27.89
+      servico     Eletricidade	          TEL + TV + NET + TLM	         Água e saneamento
+      custo	        45.56		                      40                          27.89
 */
 
   //Ligação á base de dados
@@ -21,7 +21,10 @@
   $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('EDP', 'Eletricidade', 45.56)";
   $conn->query($query);
 
+  $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('NOWO', 'Tel +TV + NET + TLM', 40)";
+  $conn->query($query);
 
+  $query = "INSERT INTO ";
 
   //Fecha a ligação á base de dados Mysql
   $conn->close();
