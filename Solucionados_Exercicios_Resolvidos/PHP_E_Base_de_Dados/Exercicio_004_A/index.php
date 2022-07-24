@@ -24,7 +24,12 @@
   $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('NOWO', 'Tel +TV + NET + TLM', 40)";
   $conn->query($query);
 
-  $query = "INSERT INTO ";
+  $nome = "SMAS_CB";
+  $servico = "";
+  $query = "INSERT INTO cobradores (nome, servico, susto) VALUES (?, ?, ?)";
+  $stmt = $conn->prepare($query);
+  $stmt->bind_param("ssd", "SMASCB", "Água e Saneamento", 27.89);
+  $stmt->execute();
 
   //Fecha a ligação á base de dados Mysql
   $conn->close();
