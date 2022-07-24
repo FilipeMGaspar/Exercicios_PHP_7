@@ -28,5 +28,5 @@ $conn->query($query);
 $query = "INSERT INTO fornecedores (nome, email, descricao) VALUES ('Maria', 'maria@gmail.com', 'Vende Tintas');";
 $conn->query($query);
 
-//Fecha a ligação á base de dados
+  //Fecha a ligação á base de dados Mysql
 $conn->close();
