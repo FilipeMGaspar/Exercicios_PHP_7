@@ -27,7 +27,7 @@ use function PHPSTORM_META\type;
   $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('NOWO', 'Tel +TV + NET + TLM', 40)";
   $conn->query($query);
 
-  $query = "INSERT INTO cobradores (nome, servico, susto) VALUES ('SMAS_CB', 'Água e Saneamento', 27.89)";
+  $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('SMAS-CB', 'Agua e Saneamento', 27.89)";
   $conn->query($query);
 
   //Fecha a ligação á base de dados Mysql
