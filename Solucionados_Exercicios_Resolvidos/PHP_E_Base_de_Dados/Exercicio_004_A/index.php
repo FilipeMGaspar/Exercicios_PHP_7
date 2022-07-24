@@ -8,4 +8,10 @@
     servico     Eletricidade	            TV + NET + TLM	         Água e saneamento
     custo	    45.56		                    40                          27.89
 
-/*
+    */
+
+//Ligação á base de dados
+$host = "localhost";
+$user  = "root";
+$pass = "";
+$db = "contas";
