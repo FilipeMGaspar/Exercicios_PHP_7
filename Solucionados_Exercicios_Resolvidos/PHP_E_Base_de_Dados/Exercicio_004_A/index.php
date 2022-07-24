@@ -20,7 +20,7 @@ use function PHPSTORM_META\type;
   $db = "contas";
 
   $conn = new mysqli($host, $user, $pass, $db);
-/*
+
   $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('EDP', 'Eletricidade', 45.56)";
   $conn->query($query);
 
@@ -29,7 +29,7 @@ use function PHPSTORM_META\type;
 
   $query = "INSERT INTO cobradores (nome, servico, custo) VALUES ('SMAS-CB', 'Agua e Saneamento', 27.89)";
   $conn->query($query);
-*/
+
 
   //Teste com prepare e bind param
   $nome = "Cepsa";
