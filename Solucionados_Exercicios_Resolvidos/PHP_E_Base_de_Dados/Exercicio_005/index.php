@@ -15,13 +15,8 @@
 
     $consulta = $conn->query($query);
 
-    $resultados = $consulta->fetch_assoc();
-
-    foreach ($resultados as $resultado){
-        echo $resultado . " | ";
+    while ($resultados = $consulta->fetch_object()){  /// $reg = $busca->fetch_object()
+        echo $resultados->nome;
     }
-
-    echo "<br><br>";
-    print_r($resultados);
 
     $conn->close(); // Fecha a ligação á bas de dados
