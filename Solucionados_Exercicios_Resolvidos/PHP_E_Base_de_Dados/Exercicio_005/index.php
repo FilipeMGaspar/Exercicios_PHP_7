@@ -13,6 +13,8 @@
 
     $query = "SELECT * FROM fornecedores";
 
-    $conn->query($query);
+    $resultado = $conn->query($query);
 
+    print_r($resultado);
+    
     $conn->close(); // Fecha a ligação á bas de dados
