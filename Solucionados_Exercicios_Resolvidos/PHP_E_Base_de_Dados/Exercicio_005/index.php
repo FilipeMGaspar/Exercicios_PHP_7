@@ -15,6 +15,7 @@
 
     $resultado = $conn->query($query);
 
-    print_r($resultado);
-    
+    $result = $resultado->fetch_all();
+    print_r($result);
+
     $conn->close(); // Fecha a ligação á bas de dados
