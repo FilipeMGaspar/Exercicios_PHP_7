@@ -13,10 +13,13 @@
 
     $query = "SELECT * FROM fornecedores";
 
+    $conn->query($query);
+    
+/*
     $consulta = $conn->query($query);
 
     while ($resultados = $consulta->fetch_object()){
         echo $resultados->nome . " | " . $resultados->email . " | " . $resultados->descricao ."<br>";
     }
-
+*/
     $conn->close(); // Fecha a ligação á bas de dados
