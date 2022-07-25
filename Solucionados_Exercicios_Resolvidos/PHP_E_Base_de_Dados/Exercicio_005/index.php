@@ -13,9 +13,14 @@
 
     $query = "SELECT * FROM fornecedores";
 
-    $resultado = $conn->query($query);
+    $consulta = $conn->query($query);
 
-    $result = $resultado->fetch_all();
-    print_r($result);
+    $resultados = $consulta->fetch_all();
+
+    foreach ($resultados as $resultado){
+        echo $resultado;
+    }
+
+    //print_r($result);
 
     $conn->close(); // Fecha a ligação á bas de dados
