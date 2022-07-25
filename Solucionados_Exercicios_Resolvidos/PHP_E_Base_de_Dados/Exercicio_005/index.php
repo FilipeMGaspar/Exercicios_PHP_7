@@ -15,7 +15,7 @@
 
     $consulta = $conn->query($query);
 
-    $resultados = $consulta->fetch_assoc();
+    $resultados = $consulta->fetch_all();
 
   /*  foreach ($resultados as $resultado){
         echo $resultado;
