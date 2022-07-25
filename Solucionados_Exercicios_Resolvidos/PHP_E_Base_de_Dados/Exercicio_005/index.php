@@ -15,12 +15,12 @@
 
     $consulta = $conn->query($query);
 
-    $resultados = $consulta->fetch_all();
+    $resultados = $consulta->fetch_assoc();
 
-  /*  foreach ($resultados as $resultado){
+    foreach ($resultados as $resultado){
         echo $resultado;
     }
-*/
+
     print_r($resultados);
 
     $conn->close(); // Fecha a ligação á bas de dados
