@@ -11,6 +11,8 @@
 
     $conn = new mysqli($host, $user, $pass, $db); // Ligação á base de dados
 
-    
+    $query = "SELECT * FROM fornecedores";
+
+    $conn->query($query);
 
     $conn->close(); // Fecha a ligação á bas de dados
