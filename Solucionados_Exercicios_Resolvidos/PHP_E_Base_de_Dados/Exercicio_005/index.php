@@ -18,9 +18,10 @@
     $resultados = $consulta->fetch_assoc();
 
     foreach ($resultados as $resultado){
-        echo $resultado;
+        echo $resultado . " | ";
     }
 
+    echo "<br><br>";
     print_r($resultados);
 
     $conn->close(); // Fecha a ligação á bas de dados
