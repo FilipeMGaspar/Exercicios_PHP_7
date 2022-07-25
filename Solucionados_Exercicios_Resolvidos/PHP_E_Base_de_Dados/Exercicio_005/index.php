@@ -8,3 +8,9 @@
     $user = "filipe";
     $pass = "teste123";
     $db = "praticaphp";
+
+    $conn = new mysqli($host, $user, $pass, $db); // Ligação á base de dados
+
+    
+
+    $conn->close(); // Fecha a ligação á bas de dados
