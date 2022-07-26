@@ -32,6 +32,3 @@
 
     echo "<br><br>";
     print_r($data);
-
-    echo "<br><br>";
-    print_r($resultado);
