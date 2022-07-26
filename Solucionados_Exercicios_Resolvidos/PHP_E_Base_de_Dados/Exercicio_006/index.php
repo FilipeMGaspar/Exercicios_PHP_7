@@ -17,18 +17,17 @@
     $id = 1; // Id do fornecedor
 
     $stmt = $conn->prepare("SELECT * FROM fornecedores WHERE id = ?");
-    
-    $stmt->bind_param("i", $id); 
+
+   var_dump($id);
+    // $stmt->bind_param("i", $id);
+
+    /*$stmt->bind_param("i", $id); 
 
     $stmt->execute();
 
     $resultado = $stmt->get_result();
 
     $data = $resultado->fetch_row();
-
-    $conn->close();
-
-    print_r($data);
 
     $conn->close(); // Fecha a ligação á base de dados
 
