@@ -12,6 +12,11 @@
     $pass = "";
     $db = "praticaphp";
 
+    $id = 1;
+
     $conn = new mysqli($host, $user, $pass, $db);
 
     $querySql = "SELECT nome, email from fornecedores WHERE id > ?";
+
+    $stmt = $conn->prepare($querySql);
+    $stmt->bind_param("i", $id);
