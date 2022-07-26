@@ -14,12 +14,12 @@
     
     $conn = new mysqli($host, $user, $pass, $db);
 
-    $id = 1;
+    $id = 1; // Id do fornecedor
 
-   // $querySql = "SELECT nome, email from fornecedores WHERE id = ?";
-
-    $stmt = $conn->prepare("SELECT * FROM itens WHERE id = ?");
+    $stmt = $conn->prepare("SELECT * FROM fornecedores WHERE id = ?");
+    
     $stmt->bind_param("i", $id); 
+
     $stmt->execute();
 
     $resultado = $stmt->get_result();
