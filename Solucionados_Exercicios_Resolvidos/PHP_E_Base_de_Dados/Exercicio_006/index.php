@@ -5,3 +5,9 @@
 
 	SELECT nome, email FROM fornecedores where id > 1;
 */ 
+
+    // Ligação á base de dados
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $db = "fornecedores";
