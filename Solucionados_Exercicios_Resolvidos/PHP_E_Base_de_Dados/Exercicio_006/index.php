@@ -26,7 +26,8 @@
 
     $resultado = $stmt->get_result();
 
-    $data = $resultado->fetch_row();
+    //$data = $resultado->fetch_row(); //Obtem apenas um resultado
+    $data = $resultado->fetch_all(); // Obtem todos os resultados
 
     $conn->close(); // Fecha a ligação á base de dados
 
