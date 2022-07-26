@@ -26,6 +26,10 @@
 
     $data = $resultado->fetch_row();
 
+    $conn->close();
+
+    print_r($data);
+
     $conn->close(); // Fecha a ligação á base de dados
 
     print_r($data);
