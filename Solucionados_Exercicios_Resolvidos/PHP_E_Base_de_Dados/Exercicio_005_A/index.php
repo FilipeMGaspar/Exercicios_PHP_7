@@ -9,3 +9,16 @@
     $user = "filipe";
     $pass = "teste123";
     $db = "contas";
+
+    $conn = new mysqli($host, $user, $pass, $db);
+
+    $querySql = "SELECT * FROM cobradores";
+
+    /* Mostrar dados na tela */
+    $consulta = $conn->query($querySql);
+
+    while() {
+        
+    }
+
+    $conn->close(); //Fecha a ligação á base de dados
