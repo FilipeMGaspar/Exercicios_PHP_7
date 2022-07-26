@@ -18,8 +18,9 @@
     $consulta = $conn->query($querySql);
 
     echo "<table>";
+    echo "<tr>";
         while($reg = $consulta->fetch_object()) {
-            echo $reg->nome . " | " . $reg->servico . " | " . $reg->custo . "<br>";
+            echo "<td>". $reg->nome . "</td> " . "<td>" . $reg->servico . "</td> " . "<td>". $reg->custo . "</td>";
         }
     echo "</table>";
     $conn->close(); //Fecha a ligação á base de dados
