@@ -11,3 +11,5 @@
     $user = "root";
     $pass = "";
     $db = "fornecedores";
+
+    $conn = new mysqli($host, $user, $pass, $db);
