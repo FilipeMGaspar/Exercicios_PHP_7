@@ -14,13 +14,17 @@
 
     $querySql = "SELECT * FROM cobradores";
 
-    /* Mostrar dados na tela */
+    $conn->query($querySql);
+
+    /*
+    // Mostrar dados na tela
     $consulta = $conn->query($querySql);
 
-    echo "<table>";
-    echo "<tr>";
+    echo "<table>";    
         while($reg = $consulta->fetch_object()) {
-            echo "<td>". $reg->nome . "</td> " . "<td>" . $reg->servico . "</td> " . "<td>". $reg->custo . "</td>";
+            echo "<tr><td>". $reg->nome . "</td> " . "<td>" . $reg->servico . "</td> " . "<td>". $reg->custo . "</td></tr>";
         }
     echo "</table>";
+    */
+
     $conn->close(); //Fecha a ligação á base de dados
