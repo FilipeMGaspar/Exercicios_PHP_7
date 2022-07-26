@@ -18,8 +18,9 @@
 
     $stmt = $conn->prepare("SELECT * FROM fornecedores WHERE id = ?");
 
-   var_dump($id);
-    // $stmt->bind_param("i", $id);
+    var_dump($id);
+    
+    $stmt->bind_param("i", $id);
 
     /*$stmt->bind_param("i", $id); 
 
