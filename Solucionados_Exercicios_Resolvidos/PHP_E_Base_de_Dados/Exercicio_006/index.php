@@ -11,20 +11,39 @@
     $user = "root";
     $pass = "";
     $db = "praticaphp";
-
-    $id = 1;
     
     $conn = new mysqli($host, $user, $pass, $db);
 
-    $querySql = "SELECT nome, email from fornecedores WHERE id > ?";
+    $id = 1;
 
-    $stmt = $conn->prepare($querySql);
-    $stmt->bind_param("i", $id);
+   // $querySql = "SELECT nome, email from fornecedores WHERE id = ?";
+
+    $stmt = $conn->prepare("SELECT * FROM itens WHERE id = ?");
+    $stmt->bind_param("i", $id); 
     $stmt->execute();
 
-    $resultado = $stmt->fetch();
+    $resultado = $stmt->get_result();
 
-    print_r($resultado);
-
+    $data = $resultado->fetch_row();
 
     $conn->close(); // Fecha a ligação á base de dados
+
+    print_r($data);
+
+    /*
+    $id = 8;
+
+    $stmt = $conn->prepare("SELECT * FROM itens WHERE id = ?");
+
+    $stmt->bind_param("i", $id); 
+
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+
+    $data = $resultado->fetch_row();
+
+    $conn->close();
+
+    print_r($data);
+    */
