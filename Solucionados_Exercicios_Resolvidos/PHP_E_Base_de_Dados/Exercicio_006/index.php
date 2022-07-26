@@ -1,7 +1,7 @@
 <?php
 /*
     Utilizando a base de dados ..: praticaphp.
-	Selecione os seguintes dados, nome e email da tabela ..: fornecedores :.. onde o id seja maior que 1 utilize o mysqli, deve utilizar o prepare e bind_param.
+	Selecione os seguintes dados, nome e email da tabela ..: fornecedores :.. onde o codigo seja maior que 1 utilize o mysqli, deve utilizar o prepare e bind_param.
 
 	SELECT nome, email FROM fornecedores where id > 1;
 */ 
@@ -16,13 +16,11 @@
 
     $id = 1; // Id do fornecedor
 
-    $query = "SELECT * FROM fornecedores WHERE codigo = ?";
+    $query = "SELECT * FROM fornecedores WHERE codigo > ?";
 
     $stmt = $conn->prepare($query);
 
     $stmt->bind_param("i", $id);
-
-    /*$stmt->bind_param("i", $id); 
 
     $stmt->execute();
 
@@ -32,22 +30,8 @@
 
     $conn->close(); // Fecha a ligação á base de dados
 
+    echo "<br><br>";
     print_r($data);
 
-    /*
-    $id = 8;
-
-    $stmt = $conn->prepare("SELECT * FROM itens WHERE id = ?");
-
-    $stmt->bind_param("i", $id); 
-
-    $stmt->execute();
-
-    $resultado = $stmt->get_result();
-
-    $data = $resultado->fetch_row();
-
-    $conn->close();
-
-    print_r($data);
-    */
+    echo "<br><br>";
+    print_r($resultado);
