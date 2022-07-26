@@ -16,10 +16,10 @@
 
     $id = 1; // Id do fornecedor
 
-    $stmt = $conn->prepare("SELECT * FROM fornecedores WHERE id = ?");
+    $query = "SELECT * FROM fornecedores WHERE codigo = ?";
 
-    var_dump($id);
-    
+    $stmt = $conn->prepare($query);
+
     $stmt->bind_param("i", $id);
 
     /*$stmt->bind_param("i", $id); 
