@@ -10,6 +10,8 @@
     $host = "localhost";
     $user = "root";
     $pass = "";
-    $db = "fornecedores";
+    $db = "praticaphp";
 
     $conn = new mysqli($host, $user, $pass, $db);
+
+    $querySql = "SELECT nome, email from fornecedores WHERE id > ?";
