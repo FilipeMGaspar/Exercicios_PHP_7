@@ -22,4 +22,10 @@
     $stmt->bind_param("i", $id);    
     $stmt->execute();
 
+    // ..: Como teste mostrar dados no front *****
+    
+    $result = $stmt->get_result(); 
+
+    $data = $result->fetch_all(); // Obtem todos os dados contidos na tabela cobradores
+
     $conn->close();
