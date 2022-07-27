@@ -1,9 +1,9 @@
 <?php
     /*
         Utilizando a base de dados ..: contas
-        Selecione os seguintes dados, nome, servico e custo da tabela ..: cobradores :.. onde o codigo seja maior que 3 utilize o mysqli, deve utilizar o prepare e bind_param.
+        Selecione os seguintes dados, nome, servico e custo da tabela ..: cobradores :.. onde o idconta seja maior que 3 utilize o mysqli, deve utilizar o prepare e bind_param.
 
-        SELECT nome, email FROM fornecedores where id > 3;
+        SELECT nome, email FROM fornecedores where idconta > 3;
     */ 
 
     $host = "localhost";
@@ -11,6 +11,15 @@
     $pass = "";
     $db = "contas";
 
+    $id = 3; // definição do id 
+
     $conn = new mysqli($host, $user, $pass, $db);
 
-    $querySql = "SELECT nome, servico, custo from cobradores ";
+    $querySql = "SELECT nome, servico, custo from cobradores WHERE idconta > ?";
+
+    //Sem mostrar dados no front end
+    $stmt = $conn->prepare($querySql);
+    $stmt->bind_param("i", $id);    
+    $stmt->execute();
+
+    $conn->close();
