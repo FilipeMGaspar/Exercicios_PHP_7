@@ -16,7 +16,7 @@
 
     $id = 1; // Id do fornecedor
 
-    $query = "SELECT * FROM fornecedores WHERE codigo > ?";
+    $query = "SELECT nome, email FROM fornecedores WHERE codigo > ?";
 
     $stmt = $conn->prepare($query);
 
