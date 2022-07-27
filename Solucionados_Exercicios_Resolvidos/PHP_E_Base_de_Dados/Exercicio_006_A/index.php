@@ -28,12 +28,10 @@
 
     $data = $result->fetch_all(); // Obtem todos os dados contidos na tabela cobradores
 
-    $data2 = $result->fetch_assoc();
-
     $conn->close(); // Fecha a ligação á base de dados
 
     print_r($data);
-    echo "<br><br>";
 
-    echo "data2 ..:";
-    print_r($data2);
+    while ($dt = $result->fetch_row()) {
+        echo $dt . "<br>";
+    }
