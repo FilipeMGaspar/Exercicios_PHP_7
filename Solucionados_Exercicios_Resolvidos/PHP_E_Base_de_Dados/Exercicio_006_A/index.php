@@ -5,3 +5,10 @@
 
         SELECT nome, email FROM fornecedores where id > 3;
     */ 
+
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $db = "contas";
+
+    $conn = new mysqli($host, $user, $pass, $db);
