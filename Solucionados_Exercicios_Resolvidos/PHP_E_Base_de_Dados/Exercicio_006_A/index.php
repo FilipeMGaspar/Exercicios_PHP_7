@@ -12,3 +12,5 @@
     $db = "contas";
 
     $conn = new mysqli($host, $user, $pass, $db);
+
+    $querySql = "SELECT nome, servico, custo from cobradores ";
