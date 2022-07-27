@@ -31,7 +31,3 @@
     $conn->close(); // Fecha a ligação á base de dados
 
     print_r($data);
-
-    while ($dt = $result->fetch_row()) {
-        echo $dt . "<br>";
-    }
