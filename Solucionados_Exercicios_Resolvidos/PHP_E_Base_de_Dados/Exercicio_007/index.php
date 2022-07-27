@@ -5,3 +5,8 @@
 
     SELECT nome, email FROM fornecedores where id > 2;
 */
+
+$host = "localhost";
+$user = "filipe";
+$pass = "teste123";
+$db = "praticaphp";
