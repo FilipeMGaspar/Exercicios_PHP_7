@@ -6,7 +6,9 @@
     SELECT nome, email FROM fornecedores where id > 2;
 */
 
-$host = "localhost";
-$user = "filipe";
-$pass = "teste123";
-$db = "praticaphp";
+    $host = "localhost";
+    $user = "filipe";
+    $pass = "teste123";
+    $db = "praticaphp";
+
+    $conn = new mysqli($host, $user, $pass, $db); // Ligação á base de dados
