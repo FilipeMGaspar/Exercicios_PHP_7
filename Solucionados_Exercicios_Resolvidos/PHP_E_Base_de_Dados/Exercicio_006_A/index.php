@@ -28,4 +28,6 @@
 
     $data = $result->fetch_all(); // Obtem todos os dados contidos na tabela cobradores
 
-    $conn->close();
+    $conn->close(); // Fecha a ligação á base de dados
+
+    print_r($data);
