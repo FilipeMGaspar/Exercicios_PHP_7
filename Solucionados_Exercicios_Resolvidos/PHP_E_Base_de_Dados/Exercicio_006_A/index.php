@@ -11,7 +11,7 @@
     $pass = "";
     $db = "contas";
 
-    $id = 3; // definição do id 
+    $id = 2; // definição do id 
 
     $conn = new mysqli($host, $user, $pass, $db);
 
@@ -28,6 +28,11 @@
 
     $data = $result->fetch_all(); // Obtem todos os dados contidos na tabela cobradores
 
+    $data2 = $result->fetch_assoc();
+
     $conn->close(); // Fecha a ligação á base de dados
 
     print_r($data);
+    echo "<br><br>";
+
+    print_r($data2);
