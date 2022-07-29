@@ -26,4 +26,6 @@
 
    $data = $resultados->fetch_all();
 
-   print_r($data);
+   $teste = $resultados->fetch_assoc();
+
+   print_r($teste);
