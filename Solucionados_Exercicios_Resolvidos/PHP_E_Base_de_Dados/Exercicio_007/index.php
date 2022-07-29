@@ -31,5 +31,6 @@
     //$res = $dados->fetch_object();
     //echo "$res->nome  | $res->email<br>";
 
-    echo $res[0][0] . "<br>" . $res[0][1] . "<br>";
+    echo $res[0][0] . "|" . $res[0][1] . "<br>";
+    
     print_r($res);
