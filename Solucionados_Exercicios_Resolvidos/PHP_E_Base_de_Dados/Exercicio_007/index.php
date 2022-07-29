@@ -10,6 +10,7 @@
     $pass = "teste123";
     $db = "praticaphp";
 
+    $dados = [];
     $id = 2;
 
     $conn = new mysqli($host, $user, $pass, $db); // Ligação á base de dados
@@ -21,3 +22,8 @@
     $stmt->bind_param("i", $id);
 
     $stmt->execute();
+
+    $result = $stmt->get_result(); // Recolha de todos os dados vindos do select
+
+    $dados = $result->fetch_all();
+    print_r($dados);
