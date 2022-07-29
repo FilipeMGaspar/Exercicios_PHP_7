@@ -24,4 +24,6 @@
 
    $resultados = $stmt->get_result();
 
-   print_r($resultados);
+   $data = $resultados->fetch_all();
+
+   print_r($data);
