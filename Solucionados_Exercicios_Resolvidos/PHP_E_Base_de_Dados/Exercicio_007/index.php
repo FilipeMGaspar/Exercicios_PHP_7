@@ -23,8 +23,7 @@
 
     $stmt->execute();
 
-    $result = $stmt->get_result(); // Recolha de todos os dados vindos do select
+    $dados = $stmt->get_result();
 
-    $dados = $result->fetch_all();
 
-    print_r($dados["nome"]);
+    print_r($dados);
