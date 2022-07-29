@@ -16,3 +16,5 @@
     $conn = new mysqli($host, $user, $pass, $db); // Ligação á base de dados
 
     $querySql = "SELECT nome, email FROM fornecedores WHERE codigo > ?";
+
+    $stmt = $conn->prepare($querySql);
