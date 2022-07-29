@@ -21,3 +21,7 @@
     $stmt->bind_param("i", $id);
 
     $stmt->execute();
+
+   $resultados = $stmt->get_result();
+
+   print_r($resultados);
