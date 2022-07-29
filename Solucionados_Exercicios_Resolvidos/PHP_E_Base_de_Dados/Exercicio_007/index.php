@@ -24,8 +24,8 @@
 
    $resultados = $stmt->get_result();
 
-   $data = $resultados->fetch_all();
+   //$data = $resultados->fetch_all();
 
-   $teste = $resultados->fetch_assoc();
+   $teste = $resultados->fetch_row();
 
    print_r($teste);
