@@ -25,12 +25,11 @@
 
     $dados = $stmt->get_result();
 
-    //$res = $dados->fetch_all();
+    $res = $dados->fetch_all();
     //echo $res[0][0] . "|" . $res[0][1] . "<br>";
 
     //$res = $dados->fetch_object();
     //echo "$res->nome  | $res->email<br>";
 
    
-    
     print_r($res);
