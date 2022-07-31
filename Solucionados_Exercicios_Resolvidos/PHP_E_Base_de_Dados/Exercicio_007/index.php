@@ -27,9 +27,15 @@
 
     $res = $dados->fetch_all();
     //echo $res[0][0] . "|" . $res[0][1] . "<br>";
+    
+    for($i = 0; $i < count($res); $i++){
+        for ($j = 0; $j < count($res[$i]); $j++) {
+            echo $res[$i][$j] . " <-> ";
+        }
+    }
 
     //$res = $dados->fetch_object();
     //echo "$res->nome  | $res->email<br>";
 
-   
+   echo "<br><br>";
     print_r($res);
