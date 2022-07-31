@@ -30,8 +30,9 @@
     
     for($i = 0; $i < count($res); $i++){
         for ($j = 0; $j < count($res[$i]); $j++) {
-            echo $res[$i][$j] . " <-> ";
+            echo $res[$i][$j] . " | ";
         }
+        echo "<br>";
     }
 
     //$res = $dados->fetch_object();
