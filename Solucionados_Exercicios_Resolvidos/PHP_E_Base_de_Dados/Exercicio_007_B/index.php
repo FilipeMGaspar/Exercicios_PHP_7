@@ -40,4 +40,12 @@ $querySql = "CREATE TABLE people (
     country VARCHAR(10) NOT NULL
 )";
 
-//
+// Prepare statement
+$stmt = $conn->prepare($querySql);
+
+//Execução da query
+$stmt->execute();
+
+//Fecha a ligação á base de dados
+$stmt->close();
+$conn->close();
