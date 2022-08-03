@@ -15,3 +15,4 @@ $db = "contas";
 $conn = new mysqli($host, $user, $pass, $db);
 
 //Query sql
+$querySql = "SELECT nome, servico, custo FROM cobradores WHERE idconta > ?";
