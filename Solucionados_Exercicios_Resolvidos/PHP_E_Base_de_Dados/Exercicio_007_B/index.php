@@ -28,4 +28,10 @@ INSERT INTO people (username, gender, country) VALUES (
     "Beth", 'f', "Canada",
     "Sandeep", 'm', "india"
 );
-    */ 
+*/ 
+
+// Ligação á base de dados 
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "praticaphp";
