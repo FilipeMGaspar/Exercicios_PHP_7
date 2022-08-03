@@ -8,20 +8,6 @@
         gender      carcater(1)         Não pode ser nulo
         country     caracter(10)        Não pode ser nulo
 
-
-
-dados a inserir na tabela
-
-INSERT INTO people (username, gender, country) VALUES (
-    "Mike", 'm', "USA",
-    "SARAH", 'f', "Denmark",
-    "Gregory", 'm', "UK",
-    "Julie", 'f', "USA",
-    "Maria", 'f', "Mexico",
-    "Henry", 'm', "China",
-    "Beth", 'f', "Canada",
-    "Sandeep", 'm', "india"
-);
 */ 
 
 // Ligação á base de dados 
