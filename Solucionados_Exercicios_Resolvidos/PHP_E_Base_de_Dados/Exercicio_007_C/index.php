@@ -15,3 +15,13 @@
             7             Beth            f               Canada
             8             Sandeep         m               India
 */
+
+//Ligação á base de dados
+
+$host = "localhost";
+$user = "filipe";
+$pass = "teste123";
+$db = "praticaphp";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
