@@ -6,13 +6,15 @@
 */
 
 //Ligação á base de dados
-
 $host = "localhost";
 $user = "filipe";
 $pass = "teste123";
 $db = "contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
+
+// Definição do id
+$id = 2;
 
 //Query sql
 $querySql = "SELECT nome, servico, custo FROM cobradores WHERE idconta > ?";
@@ -21,3 +23,7 @@ $querySql = "SELECT nome, servico, custo FROM cobradores WHERE idconta > ?";
 $stmt = $conn->prepare($querySql);
 
 //bind param
+$stmt->bind_param("i", $id);
+
+//Execução da query
+$stmt->execute();
