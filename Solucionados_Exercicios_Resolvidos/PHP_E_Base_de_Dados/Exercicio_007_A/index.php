@@ -11,3 +11,7 @@ $host = "localhost";
 $user = "filipe";
 $pass = "teste123";
 $db = "contas";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+//Query sql
