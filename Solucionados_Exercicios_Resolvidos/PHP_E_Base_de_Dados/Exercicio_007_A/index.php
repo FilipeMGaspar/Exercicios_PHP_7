@@ -28,8 +28,10 @@ $stmt->bind_param("i", $id);
 //Execução da query
 $stmt->execute();
 
+//Obter resultados da consulta
 $resultados = $stmt->get_result();
 
 $dados = $resultados->fetch_all();
 
+//Mostrar dados no monitor
 print_r($dados);
