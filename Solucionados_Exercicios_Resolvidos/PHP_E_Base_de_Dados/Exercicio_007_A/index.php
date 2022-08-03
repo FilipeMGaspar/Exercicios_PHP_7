@@ -27,3 +27,9 @@ $stmt->bind_param("i", $id);
 
 //Execução da query
 $stmt->execute();
+
+$resultados = $stmt->get_result();
+
+$dados = $resultados->fetch_all();
+
+print_r($dados);
