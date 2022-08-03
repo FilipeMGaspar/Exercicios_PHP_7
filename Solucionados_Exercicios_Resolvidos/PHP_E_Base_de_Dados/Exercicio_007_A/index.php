@@ -31,11 +31,10 @@ $stmt->execute();
 //Obter resultados
 $resultados = $stmt->get_result();
 
-print_r($resultados->num_rows);
-
 if($resultados->num_rows > 0) {
 
-    $dados = $resultados->fetch_assoc();
+    $dados = $resultados->fetch_row();
+
     echo "<br><br>";
     print_r($dados);
 
