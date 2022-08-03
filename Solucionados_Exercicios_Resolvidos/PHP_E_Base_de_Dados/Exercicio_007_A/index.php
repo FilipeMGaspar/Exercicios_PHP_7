@@ -16,3 +16,8 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 //Query sql
 $querySql = "SELECT nome, servico, custo FROM cobradores WHERE idconta > ?";
+
+//statement com Prepare da query sql
+$stmt = $conn->prepare($querySql);
+
+//bind param
