@@ -1,6 +1,7 @@
 <?php
  /*
-Crie uma tabela de nome cobradores na base de dados contas utilzando o mysqli, a estrutura da tabela deverá ser a seguinte: 
+Utilizando a base de dados ..: contas
+Crie uma tabela de nome ..: cobradores :.. utilzando o mysqli, a estrutura da tabela deverá ser a seguinte: 
 
     id	Inteiro  auto incremento 
     nome	Carater (50) não pode ser nulo
