@@ -9,12 +9,6 @@
         country     caracter(10)        Não pode ser nulo
 
 
-        CREATE TABLE people (
-        	idPeople INT AUTO_INCREMENT PRIMARY KEY,
-            username VARCHAR(15) NOT NULL,
-            gender CHARACTER NOT NULL,
-            country VARCHAR(10) NOT NULL
-        );
 
 dados a inserir na tabela
 
@@ -35,3 +29,15 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $db = "praticaphp";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+//Query Sql 
+$querySql = "CREATE TABLE people (
+    idPeople INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(15) NOT NULL,
+    gender CHARACTER NOT NULL,
+    country VARCHAR(10) NOT NULL
+)";
+
+//
