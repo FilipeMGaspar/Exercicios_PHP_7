@@ -16,16 +16,16 @@
             country VARCHAR(10) NOT NULL
         );
 
-        dados a inserir na tabela
+dados a inserir na tabela
 
-        INSERT INTO people (username, gender, country) VALUES (
-    Mike, m, USA,
-    SARAH, f, Denmark,
-    Gregory, m, UK,
-    Julie, f, USA,
-    Maria, f, Mexico,
-    Henry, m, China.
-    Beth, f, Canada,
-    Sandeep, m, india
+INSERT INTO people (username, gender, country) VALUES (
+    "Mike", 'm', "USA",
+    "SARAH", 'f', "Denmark",
+    "Gregory", 'm', "UK",
+    "Julie", 'f', "USA",
+    "Maria", 'f', "Mexico",
+    "Henry", 'm', "China",
+    "Beth", 'f', "Canada",
+    "Sandeep", 'm', "india"
 );
     */ 
