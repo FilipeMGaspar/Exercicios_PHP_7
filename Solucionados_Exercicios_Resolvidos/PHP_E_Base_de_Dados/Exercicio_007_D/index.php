@@ -12,3 +12,11 @@ $pass = "";
 $db = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $db);
+
+$querySQL = "SELECT * FROM people";
+
+$stmt = $conn->prepare($querySQL);
+
+$stmt->execute();
+
+print_r($parameters);
