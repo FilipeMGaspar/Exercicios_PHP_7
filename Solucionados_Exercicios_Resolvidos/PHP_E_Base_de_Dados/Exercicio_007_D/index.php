@@ -19,4 +19,6 @@ $stmt = $conn->prepare($querySQL);
 
 $stmt->execute();
 
-print_r($parameters);
+$dados = $stmt->fetch();
+
+print_r($dados);
