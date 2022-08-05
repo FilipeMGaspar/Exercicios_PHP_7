@@ -19,8 +19,8 @@
 //Ligação á base de dados
 
 $host = "localhost";
-$user = "filipe";
-$pass = "teste123";
+$user = "root";
+$pass = "";
 $db = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $db);
