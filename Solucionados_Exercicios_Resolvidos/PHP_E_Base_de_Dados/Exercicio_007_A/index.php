@@ -7,8 +7,8 @@
 
 //Ligação á base de dados
 $host = "localhost";
-$user = "filipe";
-$pass = "teste123";
+$user = "root";
+$pass = "";
 $db = "contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
