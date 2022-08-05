@@ -25,3 +25,6 @@
     $stmt->bind_param("i", $id);
 
     //Execução da query
+    $stmt->execute();
+
+    $registos = $stmt->get_result(); // Obterdo dados da consulta
