@@ -20,9 +20,8 @@ $stmt = $conn->prepare($querySQL);
 $stmt->execute();
 
 $dados = $stmt->get_result();
-echo "<table";
-echo "<th><td># ID</td><td>UserName</td><td>Gender</td><td>Country</td></th>";
+echo "<table>";
+echo "<tr> <td># ID</td> <td>UserName</td> <td>Gender</td> <td>Country</td> </tr>";
 while ($dado = $dados->fetch_assoc()) {
-    echo "<tr><td>" .$dado["idPeople"] . "</td>";
+    echo "<tr> <td>" . $dado["idPeople"] . "</td><td>". $dado["username"] ."</tr>";
 }
-echo "</table>";
