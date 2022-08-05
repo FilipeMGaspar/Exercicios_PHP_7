@@ -12,8 +12,8 @@ descricao	Vende Vasouras		        Vende Jornais            Vende papeis recortad
 // Ligação á base de dados
 
 $host = "localhost";
-$user = "filipe";
-$pass = "teste123";
+$user = "root";
+$pass = "";
 $bd = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $bd);
