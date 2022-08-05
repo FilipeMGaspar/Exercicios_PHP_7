@@ -6,8 +6,8 @@
 */
 
     $host = "localhost";
-    $user = "filipe";
-    $pass = "teste123";
+    $user = "root";
+    $pass = "";
     $db = "praticaphp";
 
     $dados = [];
