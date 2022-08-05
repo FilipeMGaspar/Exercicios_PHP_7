@@ -28,3 +28,6 @@
     $stmt->execute();
 
     $registos = $stmt->get_result(); // Obterdo dados da consulta
+
+    //Mostrar dados numa tabela
+    
