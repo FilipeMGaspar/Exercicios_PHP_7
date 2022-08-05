@@ -30,6 +30,12 @@
     $registos = $stmt->get_result(); // Obterdo dados da consulta
 
     //Mostrar dados numa tabela
+    echo "<table>";
+    echo "<tr> <td>Username</td> <td>Gender</td> <td>Country</td> </tr>";
+    while ($reg = $registos->fetch_assoc()) {
+        echo "<tr><td>" . $reg["username"] ."</td></tr>";
+    }
+    echo "</table>";
 
     //fechar a ligação á base de dados
     $stmt->close();
