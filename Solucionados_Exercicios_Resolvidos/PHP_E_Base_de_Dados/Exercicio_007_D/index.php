@@ -19,6 +19,8 @@ $stmt = $conn->prepare($querySQL);
 
 $stmt->execute();
 
-$dados = $stmt->fetch();
+$dados = $stmt->get_result();
 
-print_r($dados);
+while ($dado = $dados->fetch_assoc()) {
+    echo $dado["idPeople"];
+}
