@@ -30,4 +30,7 @@
     $registos = $stmt->get_result(); // Obterdo dados da consulta
 
     //Mostrar dados numa tabela
-    
+
+    //fechar a ligação á base de dados
+    $stmt->close();
+    $conn->close();
