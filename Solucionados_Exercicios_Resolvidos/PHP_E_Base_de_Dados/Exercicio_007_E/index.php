@@ -10,3 +10,13 @@
     $user = "root";
     $pass = "";
     $db =  "praticaphp";
+
+    $conn = new mysqli($host, $user, $pass, $db);
+
+    $id = 2;
+
+    //Query sql
+    $querySql = "SELECT username, gender, country FROM people WHERE idPeople > ?";
+
+    $stmt = $conn->prepare($querySql);
+    
