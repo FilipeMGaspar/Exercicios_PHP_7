@@ -18,5 +18,10 @@
     //Query sql
     $querySql = "SELECT username, gender, country FROM people WHERE idPeople > ?";
 
+    // prepare da query evita sql injetion
     $stmt = $conn->prepare($querySql);
-    
+
+    // Bind param associa o ? á variavel $id
+    $stmt->bind_param("i", $id);
+
+    //Execução da query
