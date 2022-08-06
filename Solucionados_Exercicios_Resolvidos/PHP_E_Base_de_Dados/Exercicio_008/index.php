@@ -17,7 +17,7 @@
     //Definição do id
     $id = 1;
 
-    $querySql = "UPDATE fornecedores SET nome='Ricardo Zacarias' WHERE codigo = ?";
+    $querySql = "UPDATE fornecedores SET nome='Ricardo Arrigoni' WHERE codigo = ?";
 
     $stmt = $conn->prepare($querySql);    
     $stmt->bind_param("i", $id);
@@ -36,5 +36,6 @@
     $reg = $registos->fetch_assoc();
 
     echo "<br>";
-    echo "Nome: " . $reg["nome"] . "<br>";
-    echo "E-mail:" . $reg["email"] . " <br>";
+    echo "<strong>Nome:</strong> " . $reg["nome"] . "<br>";
+    echo "<strong>E-mail:</strong> " . $reg["email"] . " <br>";
+    echo "<strong>Descrição:</strong> " . $reg["descricao"] . " <br>";
