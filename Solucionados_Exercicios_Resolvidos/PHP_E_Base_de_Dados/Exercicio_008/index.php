@@ -36,4 +36,5 @@
     $reg = $registos->fetch_assoc();
 
     echo "<br>";
-    echo "Nome: " . $reg["nome"];
+    echo "Nome: " . $reg["nome"] . "<br>";
+    echo "E-mail:" . $reg["email"] . " <br>";
