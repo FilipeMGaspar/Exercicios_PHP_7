@@ -17,18 +17,22 @@
     //Definição do id
     $id = 1;
 
-    $querySql = "UPDATE fornecedores SET nome='Ricardo Arrigoni' WHERE codigo = ?";
+    $querySql = "UPDATE fornecedores SET nome='Ricardo Zacarias' WHERE codigo = ?";
 
-    $stmt = $conn->prepare($querySql);
-    
+    $stmt = $conn->prepare($querySql);    
     $stmt->bind_param("i", $id);
-
     $stmt->execute();
 
     echo "Nome alterado com sucesso. <br>";
 
     //Seleção dos dados
-    $querySql = "SELECT nome, email, descricao FROM fornecedores WHERE id = ?";
+    $querySql = "SELECT nome, email, descricao FROM fornecedores WHERE codigo = ?";
 
     $stmt = $conn->prepare($querySql);
-    $stmt->bind_param();
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    $registos = $stmt->get_result();
+    $reg = $registos->fetch_assoc();
+
+    print_r($reg);
