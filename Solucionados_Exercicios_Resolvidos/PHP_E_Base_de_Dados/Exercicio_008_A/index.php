@@ -11,3 +11,5 @@ $pass = "";
 $db = "contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
+
+$stmt = $conn->prepare("UPDATE cobradores SET custo = ? WHERE idconta = ?");
