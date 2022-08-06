@@ -11,7 +11,7 @@ $pass = "";
 $db = "contas";
 
 $idconta = 4;
-$custo = 33.75;
+$custo = 32.65;
 
 $conn = new mysqli($host, $user, $pass, $db);
 
@@ -23,15 +23,15 @@ $stmt->execute();
 echo "Dados atualizados com sucesso! <br><br>";
 //Seleção dos dados e apresentação de resultado no monitor
 $stmt = $conn->prepare("SELECT 	nome, servico, custo FROM cobradores WHERE idconta = ?");
-$stmt->bind_param("i", $id);
+$stmt->bind_param("i", $idconta);
 $stmt->execute();
 
 $resultados = $stmt->get_result();
 $registo = $resultados->fetch_assoc();
 
-echo "<strong>Fornecedor:</strong> " ."<br>";
-echo "<strong>Fornecedor:</strong> " ."<br>";
-echo "<strong>Fornecedor:</strong> " ."<br>";
+echo "<strong>Fornecedor:</strong> " . $registo["nome"] . "<br>";
+echo "<strong>Serviço:</strong> " . $registo["servico"] . "<br>";
+echo "<strong>Fatura:</strong> " . $registo["custo"] . "<br>";
 
 $stmt->close();
 $conn->close();
