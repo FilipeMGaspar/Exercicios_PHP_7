@@ -22,3 +22,13 @@
     $stmt = $conn->prepare($querySql);
     
     $stmt->bind_param("i", $id);
+
+    $stmt->execute();
+
+    echo "Nome alterado com sucesso. <br>";
+
+    //Seleção dos dados
+    $querySql = "SELECT nome, email, descricao FROM fornecedores WHERE id = ?";
+
+    $stmt = $conn->prepare($querySql);
+    $stmt->bind_param();
