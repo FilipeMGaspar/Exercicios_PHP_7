@@ -18,3 +18,7 @@
     $id = 1;
 
     $querySql = "UPDATE fornecedores SET nome='Ricardo Arrigoni' WHERE codigo = ?";
+
+    $stmt = $conn->prepare($querySql);
+    
+    $stmt->bind_param("i", $id);
