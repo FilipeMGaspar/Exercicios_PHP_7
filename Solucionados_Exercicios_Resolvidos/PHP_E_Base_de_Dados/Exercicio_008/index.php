@@ -35,4 +35,5 @@
     $registos = $stmt->get_result();
     $reg = $registos->fetch_assoc();
 
-    print_r($reg);
+    echo "<br>";
+    echo "Nome: " . $reg["nome"];
