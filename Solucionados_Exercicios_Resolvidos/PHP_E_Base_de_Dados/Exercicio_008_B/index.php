@@ -29,6 +29,12 @@
     //Mostrar dados no monitor
     $stmt->prepare("SELECT * FROM people WHERE username = ?");
     $stmt->bind_param("s", $newUserName);
+    $stmt->execute();
+
+    $resultados = $stmt->get_result();
+    $resultado = $resultados->fetch_assoc();
+
+    echo "";
 
     // Fecha a ligação á base de dados
     $stmt->close();
