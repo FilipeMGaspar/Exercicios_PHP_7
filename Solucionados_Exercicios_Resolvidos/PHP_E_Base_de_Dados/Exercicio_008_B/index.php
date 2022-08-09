@@ -18,13 +18,12 @@
 
     //prepare da Query sql
     $stmt =$conn->prepare("UPDATE people SET username = ? WHERE username = ?");
-
-    //Bind paran
+    //Bind param
     $stmt->bind_param("ss", $userNameOld, $newUserName);
-
     //Execução da query
     $stmt->execute();
 
+    echo "<h5>username alterado com sucesso!</h5>";
 
     //Mostrar dados no monitor
     $stmt->prepare("SELECT * FROM people WHERE username = ?");
@@ -34,7 +33,10 @@
     $resultados = $stmt->get_result();
     $resultado = $resultados->fetch_assoc();
 
-    echo "";
+    echo "<br>";
+    echo "<strong>UserName:</strong> " . $resultado["username"] . "<br>";
+    echo "<strong>Gender:</strong> ". $resultado["gender"] . "<br>";
+    echo "<strong>Country:</strong> " . $resultado["country"] . "<br>";
 
     // Fecha a ligação á base de dados
     $stmt->close();
