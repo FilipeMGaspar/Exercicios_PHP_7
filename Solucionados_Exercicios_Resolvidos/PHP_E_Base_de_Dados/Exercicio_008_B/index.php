@@ -12,7 +12,7 @@
     $db = "praticaphp";
 
     $idPeople  = 6;
-    $newUserName = "HenryPaulo";
+    $newUserName = "HenryP";
 
     $conn = new mysqli($host, $user, $pass, $db);
 
@@ -23,7 +23,7 @@
     //Execução da query
     $stmt->execute();
 
-    echo "<h5>username alterado com sucesso!</h5>";
+    echo "<h3>username alterado com sucesso!</h3>";
     //Mostrar dados no monitor
     $stmt->prepare("SELECT * FROM people WHERE idPeople = ?");
     $stmt->bind_param("s", $idPeople);
