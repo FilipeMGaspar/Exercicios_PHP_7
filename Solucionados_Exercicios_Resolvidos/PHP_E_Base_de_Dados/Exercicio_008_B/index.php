@@ -12,3 +12,6 @@
     $db = "praticaphp";
 
     $conn = new mysqli($host, $user, $pass, $db);
+
+    //Query sql
+    $query = "UPDATE people SET username = ? WHERE username = ?";
