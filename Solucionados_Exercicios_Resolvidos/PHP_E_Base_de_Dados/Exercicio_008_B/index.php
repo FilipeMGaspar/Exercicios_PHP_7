@@ -11,7 +11,13 @@
     $pass = "";
     $db = "praticaphp";
 
+    $userNameOld = "Henry";
+    $newUserName = "HenryP";
+
     $conn = new mysqli($host, $user, $pass, $db);
 
-    //Query sql
-    $query = "UPDATE people SET username = ? WHERE username = ?";
+    //prepare da Query sql
+    $stmt =$conn->prepare("UPDATE people SET username = ? WHERE username = ?");
+
+    //Bind paran
+    
