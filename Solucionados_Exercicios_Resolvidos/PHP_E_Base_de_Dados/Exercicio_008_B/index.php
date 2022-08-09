@@ -32,12 +32,12 @@
 
     $resultados = $stmt->get_result();
     $resultado = $resultados->fetch_assoc();
-/*
+
     echo "<br>";
     echo "<strong>UserName:</strong> " . $resultado["username"] . "<br>";
     echo "<strong>Gender:</strong> ". $resultado["gender"] . "<br>";
     echo "<strong>Country:</strong> " . $resultado["country"] . "<br>";
-*/
+    
     print_r($resultado);
     // Fecha a ligação á base de dados
     $stmt->close();
