@@ -20,4 +20,16 @@
     $stmt =$conn->prepare("UPDATE people SET username = ? WHERE username = ?");
 
     //Bind paran
-    
+    $stmt->bind_param("ss", $userNameOld, $newUserName);
+
+    //Execução da query
+    $stmt->execute();
+
+
+    //Mostrar dados no monitor
+    $stmt->prepare("SELECT * FROM people WHERE username = ?");
+    $stmt->bind_param("s", $newUserName);
+
+    // Fecha a ligação á base de dados
+    $stmt->close();
+    $conn->close();
