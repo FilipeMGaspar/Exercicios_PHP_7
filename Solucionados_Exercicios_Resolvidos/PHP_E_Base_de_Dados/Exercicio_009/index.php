@@ -19,3 +19,7 @@ $codigo = 3;
 $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
 $stmt = $conn ->prepare($querySql);
 $stmt->bind_param("i", $codigo);
+
+$stmt->execute();
+
+//
