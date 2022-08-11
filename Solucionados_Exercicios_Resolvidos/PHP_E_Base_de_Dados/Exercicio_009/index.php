@@ -22,4 +22,6 @@ $stmt->bind_param("i", $codigo);
 
 $stmt->execute();
 
-//
+// Fecha a ligação á base de dados
+$stmt->close();
+$conn->close();
