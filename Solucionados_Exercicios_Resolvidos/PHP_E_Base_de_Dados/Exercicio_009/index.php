@@ -19,10 +19,10 @@ $codigo = 5;
 $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
 $stmt = $conn ->prepare($querySql);
 $stmt->bind_param("i", $codigo);
+$stmt->execute();
 
 //Seleção dos dados após apagar
 $stmt = $conn->prepare("SELECT * FROM fornecedores");
-$stmt->execute();
 
 $resultados = $stmt->get_result();
 
