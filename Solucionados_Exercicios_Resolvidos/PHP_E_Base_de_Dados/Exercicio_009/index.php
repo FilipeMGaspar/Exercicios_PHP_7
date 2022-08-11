@@ -13,5 +13,9 @@ $db = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
+$codigo = 3;
+
 // Query sql e execução
 $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
+$stmt = $conn ->prepare($querySql);
+$stmt->bind_param("i", $codigo);
