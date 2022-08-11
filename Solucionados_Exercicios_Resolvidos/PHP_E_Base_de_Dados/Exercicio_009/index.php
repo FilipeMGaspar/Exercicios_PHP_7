@@ -13,7 +13,7 @@ $db = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-$codigo = 3;
+$codigo = 5;
 
 // Query sql e execução
 $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
@@ -27,7 +27,7 @@ $stmt->execute();
 $resultados = $stmt->get_result();
 
 while ($reg = $resultados->fetch_assoc()) {
-	echo "| Código ..: " . $reg["codigo"] . " | Nome ..:" . $reg["nome"] . "<br>";
+	echo "| Código ..: " . $reg["codigo"] . " | Nome ..:" . $reg["nome"] . " | Descrição ..: " . $reg["descricao"] . "<br>";
 }
 
 $stmt->execute();
