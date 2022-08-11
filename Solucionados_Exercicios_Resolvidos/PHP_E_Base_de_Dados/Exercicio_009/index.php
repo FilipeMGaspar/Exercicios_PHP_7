@@ -5,3 +5,9 @@
 
 	DELETE FROM fornecedores WHERE codigo=3;
 */ 
+
+//Ligação á base de dados
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "praticaphp";
