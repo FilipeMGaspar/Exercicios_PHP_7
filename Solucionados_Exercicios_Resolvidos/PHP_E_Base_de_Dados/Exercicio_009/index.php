@@ -20,6 +20,16 @@ $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
 $stmt = $conn ->prepare($querySql);
 $stmt->bind_param("i", $codigo);
 
+//Seleção dos dados após apagar
+$stmt = $conn->prepare("SELECT * FROM fornecedores");
+$stmt->execute();
+
+$resultados = $stmt->get_result();
+
+while ($reg = $resultados->fetch_assoc()) {
+	echo "| Código ..: " . $reg["codigo"] . " | Nome ..:" . $reg["nome"] . "<br>";
+}
+
 $stmt->execute();
 
 // Fecha a ligação á base de dados
