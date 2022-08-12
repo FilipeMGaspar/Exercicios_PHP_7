@@ -11,4 +11,4 @@
     $pass = "";
     $db = "contas";
 
-    
+    $conn = new mysqli($host, $user, $pass, $db);
