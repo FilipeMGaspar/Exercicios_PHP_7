@@ -19,3 +19,13 @@
     $stmt = $conn->prepare("DELETE FROM cobradores WHERE idconta = ?");
     $stmt->bind_param("i", $idconta);
     $stmt->execute();
+
+    //Seleção de todos os dados e mostrar no front
+    $stmt = $conn->prepare("SELECT * FROM cobradores");
+    $stmt->execute();
+
+    $resultados = $stmt->get_result();
+
+    while ($reg = $resultados->fetch_assoc()) {
+        echo "IdConta ... " . $reg["idconta"] . "<br>";
+    }
