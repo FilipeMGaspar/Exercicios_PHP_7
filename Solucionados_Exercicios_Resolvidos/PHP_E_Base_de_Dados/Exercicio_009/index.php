@@ -1,7 +1,7 @@
 <?php
 /*
      Utilizando a base de dados ..: praticaphp
-	Apague os seguintes dados dna tabela ..: fornecedores :.. onde o codigo seja igual que 3 utilize o mysqli, deve utilizar o prepare e bind_param.
+	Apague os seguintes dados na tabela ..: fornecedores :.. onde o codigo seja igual que 3 utilize o mysqli, deve utilizar o prepare e bind_param.
 
 */ 
 
