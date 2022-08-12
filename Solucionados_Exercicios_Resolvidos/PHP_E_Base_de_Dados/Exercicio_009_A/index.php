@@ -27,5 +27,5 @@
     $resultados = $stmt->get_result();
 
     while ($reg = $resultados->fetch_assoc()) {
-        echo "IdConta ... " . $reg["idconta"] . "<br>";
+        echo "IdConta ... " . $reg["idconta"] . " | Fornecedor ..: ". $reg["nome"] . " | Serviço ..: " . $reg["servico"] ."<br>";
     }
