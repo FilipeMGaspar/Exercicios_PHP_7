@@ -12,3 +12,8 @@
     $db = "contas";
 
     $conn = new mysqli($host, $user, $pass, $db);
+
+    $idconta = 3;
+
+    // Query Sql e execução da mesma
+    $stmt = $conn->prepare("DELETE FROM cobradores WHERE idconta = ?");
