@@ -13,7 +13,7 @@ $db = "praticaphp";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-$codigo = 5;
+$codigo = 3;
 
 // Query sql e execução
 $querySql = "DELETE FROM fornecedores WHERE codigo = ?";
