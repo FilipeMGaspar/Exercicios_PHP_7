@@ -17,3 +17,5 @@
 
     // Query Sql e execução da mesma
     $stmt = $conn->prepare("DELETE FROM cobradores WHERE idconta = ?");
+    $stmt->bind_param("i", $idconta);
+    $stmt->execute();
