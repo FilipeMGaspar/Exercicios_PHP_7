@@ -54,5 +54,9 @@ form input[type="submit"] {
     color: rgb(44, 28, 3);
     padding: 15px;
     border-radius: 5px;
-    background: rgb(162, 211, 162);
+}
+
+.mensagens.sucess {
+    background: rgb(106, 209, 106);
+    border: 1px solid rgb(162, 211, 162);
 }
