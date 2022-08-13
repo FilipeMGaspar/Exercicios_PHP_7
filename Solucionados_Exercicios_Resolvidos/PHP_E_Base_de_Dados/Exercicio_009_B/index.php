@@ -30,7 +30,7 @@
     echo "<table>";
     echo "<tr><td> <strong> IdPeople </strong> </td> <td> <strong> UserName </strong> </td> <td> <strong> Gender </strong> </td> <td> <strong> Country </strong> </td> </tr>";
     while ($reg = $resultados->fetch_assoc()){
-        echo "<tr>" . "<td>" . $reg["idPeople"] . "</td><td>" . $reg["username"] . "</td><td>" . $reg["gender"] . "</td> </tr>";
+        echo "<tr>" . "<td>" . $reg["idPeople"] . "</td><td>" . $reg["username"] . "</td><td>" . $reg["gender"] . "</td><td>" . $reg[""] ."</td> </tr>";
     }
     echo "</table>";
     // Encerramento da ligação á base de dados
