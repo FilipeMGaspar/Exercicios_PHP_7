@@ -16,8 +16,8 @@ body {
 .container {
     position: relative;
     background: #fff;
-    width: 550px;
-    height: 450px;
+    width: 450px;
+    height: 350px;
     display: flex;
     justify-content: center;
     padding: 25px 0;
@@ -43,5 +43,11 @@ input {
 
 form input[type="submit"] {
     padding: 15px 20px;
-    margin: 0 auto;
+    margin-left: 70px;
+}
+
+.mensagens {
+    position: absolute;
+    bottom: 15px;
+    
 }
