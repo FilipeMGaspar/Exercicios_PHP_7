@@ -12,10 +12,6 @@
     */ 
     require_once "configs/liga.php";
 
-    if(!empty($_SESSION["msg"])) {
-        unset($_SESSION["msg"]);
-        unset($_SESSION["tipo"]);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -46,5 +42,11 @@
             </div>
         </div>
     </div>
+    <?php
+           if(!empty($_SESSION["msg"])) {
+            unset($_SESSION["msg"]);
+            unset($_SESSION["tipo"]);
+        }
+    ?>
 </body>
 </html>
