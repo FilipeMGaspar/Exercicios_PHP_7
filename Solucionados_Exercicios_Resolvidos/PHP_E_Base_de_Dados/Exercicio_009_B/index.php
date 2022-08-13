@@ -16,13 +16,22 @@
     $idPeople = 3;
 /*
     // Query sql e execução
-    $stmt = $conn->prepare("DELETE FROM people WHERE idpeople = ?");
+    $stmt = $conn->prepare("DELETE FROM people WHERE idPeople = ?");
     $stmt->bind_param("i", $idPeople);
     $stmt->execute();
 */
+    // Selção dos dados    
+    $stmt = $conn->prepare("SELECT * FROM people");
+    $stmt->execute();
+
+    $resultados = $stmt->get_result();//Obteção dos dados
+
     // Mostrar dados no Front
     echo "<table>";
-    echo "<th><td> <strong> IdPeople </strong> </td> <td> <strong> UserName </strong> </td> <td> <strong> Gender </strong> </td> <td> <strong> Country </strong> </td> </th>";
+    echo "<tr><td> <strong> IdPeople </strong> </td> <td> <strong> UserName </strong> </td> <td> <strong> Gender </strong> </td> <td> <strong> Country </strong> </td> </tr>";
+    while ($reg = $resultados->fetch_assoc()){
+        echo "<tr>" . "<td>" . $reg["idPeople"] . "</td><td>" . $reg["username"] ."</td> </tr>";
+    }
     echo "</table>";
     // Encerramento da ligação á base de dados
    // $stmt->close();
