@@ -43,4 +43,5 @@ input {
 
 form input[type="submit"] {
     padding: 15px 20px;
+    margin: 0 auto;
 }
