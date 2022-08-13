@@ -33,7 +33,6 @@
                     <input type="email" placeholder="E-Mail" id="email" name="email" required><br>
                     <label for="descricao">E-mail: </label>
                     <input type="text" placeholder="Descrição" id="descricao" name="descricao" required><br>
-                    
                     <input type="submit" value="Registar">
             </form>
             <div class="mensagens">

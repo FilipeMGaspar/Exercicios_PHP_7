@@ -3,8 +3,11 @@
 
     require_once "configs/liga.php";
 
-    $data[] = $_POST;
+    $nome = filter_input(INPUT_POST, "nome");
+    $email = filter_input(INPUT_POST, "email");
+    $descricao = filter_input(INPUT_POST, "descricao");
 
-    print_r($data);
+    echo "| $nome | $email | $descricao | <br>";
+   // $stmt = $conn->prepare("INSERT INTO fornecedores (nome, email, descricao) VALUES (?, ?, ?)");
 
     $conn->close();//Fecha a ligação á base de dados
