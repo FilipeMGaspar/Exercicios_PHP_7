@@ -41,6 +41,6 @@ input {
     margin-bottom: 20px;
 }
 
-input [type="submit"] {
-    align-items: center;
+form input[type="submit"] {
+    padding: 15px 20px;
 }
