@@ -20,6 +20,14 @@ body {
     height: 450px;
     display: flex;
     justify-content: center;
+    padding: 25px 0;
 }
 
-.container
+.container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 5px;
+}
