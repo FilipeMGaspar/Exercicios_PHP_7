@@ -1,12 +1,10 @@
 <?php
-    /*  Modificado para utilizar formulário em html 5
+    //Ligação á base de dados
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $db = "praticaphp";
 
-        Utilizando a base de dados praticaphp.
-	Insira os seguintes dados na tabela fornecedores utilizando o mysqli, deve utilizar o prepare e bind_param.
+    $conn = new mysqli($host, $user, $pass, $db);
 
-        codigo	        4	                     5	                       6
-        nome	      Guilherme	              Cristina	                Filipe
-        email	    guigu@gmail.com	        nita@gmail.com	        filipe@gmail.com			
-
-    */ 
 ?>

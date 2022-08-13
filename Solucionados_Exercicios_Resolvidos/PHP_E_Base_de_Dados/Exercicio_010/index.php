@@ -1,3 +1,16 @@
+<?php
+    /*  Modificado para utilizar formulário em html 5
+
+        Utilizando a base de dados. .: praticaphp.
+	    Insira os seguintes dados na tabela ..: fornecedores :.. utilizando o mysqli, deve utilizar o prepare e bind_param.
+
+        codigo	        4	                     5	                       6
+        nome	      Guilherme	              Cristina	                Filipe
+        email	    guigu@gmail.com	        nita@gmail.com	        filipe@gmail.com			
+
+    */ 
+    require_once "configs/liga.php";
+?>
 
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -13,7 +26,7 @@
     <div class="container">
         <h2>Inserindo fornecedores</h2>
         <div class="formulario">
-            <form action="" method="post">
+            <form action="regista.php" method="post">
                     <label for="nome">Nome: </label>
                     <input type="text" placeholder="Nome" id="nome" name="nome" required><br>
                     <label for="email">E-mail: </label>
@@ -23,7 +36,7 @@
                     
                     <input type="submit" value="Registar">
             </form>
-            <div class="mensagens sucesso">
+            <div class="mensagens">
                 <p>Mensagem Surge aqui</p>
             </div>
         </div>
