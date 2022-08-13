@@ -13,4 +13,5 @@
 
     $conn = new mysqli($host, $user, $pass, $db);
 
+    // Query sql e execução
     
