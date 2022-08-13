@@ -6,5 +6,19 @@
 }
 
 body {
-    
+    background: rgb(88, 88, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.container {
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
