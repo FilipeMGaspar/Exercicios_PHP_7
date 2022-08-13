@@ -25,11 +25,13 @@ body {
 
 .container h2 {
     color: rgb(3, 9, 44);
+    font-size: 29px;
+    position: absolute;
 }
 
 .formulario {
     position: relative;
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
