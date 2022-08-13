@@ -47,6 +47,8 @@
             unset($_SESSION["msg"]);
             unset($_SESSION["tipo"]);
         }
+
+        session_unset();
     ?>
 </body>
 </html>
