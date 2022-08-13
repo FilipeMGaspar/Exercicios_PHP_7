@@ -10,16 +10,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 100vh;
 }
 
 .container {
     position: relative;
-    margin: 250px auto;
     background: #fff;
     width: 350px;
     height: 450px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
+
+.container
