@@ -11,7 +11,6 @@
 
     */ 
     require_once "configs/liga.php";
-    require_once "regista.php";
 
     if(!empty($_SESSION["msg"])) {
         unset($_SESSION["msg"]);

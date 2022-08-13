@@ -14,4 +14,4 @@
     $_SESSION["msg"] = "Registo efectuado com sucesso";
     $_SESSION["tipo"] = "sucesso";
 
-    header("Location: index.php");
+    header("Location: " . $_SERVER["HTTP_REFERER"]);
