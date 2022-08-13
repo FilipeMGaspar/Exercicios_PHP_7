@@ -14,12 +14,12 @@
     $conn = new mysqli($host, $user, $pass, $db);
 
     $idPeople = 3;
-/*
+
     // Query sql e execução
     $stmt = $conn->prepare("DELETE FROM people WHERE idPeople = ?");
     $stmt->bind_param("i", $idPeople);
     $stmt->execute();
-*/
+
     // Selção dos dados    
     $stmt = $conn->prepare("SELECT * FROM people");
     $stmt->execute();
@@ -33,6 +33,7 @@
         echo "<tr>" . "<td>" . $reg["idPeople"] . "</td><td>" . $reg["username"] . "</td><td>" . $reg["gender"] . "</td><td>" . $reg["country"] ."</td> </tr>";
     }
     echo "</table>";
+
     // Encerramento da ligação á base de dados
-   // $stmt->close();
+    $stmt->close();
     $conn->close();
