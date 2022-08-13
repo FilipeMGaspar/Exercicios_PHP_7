@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /*  Modificado para utilizar formulário em html 5
 
         Utilizando a base de dados. .: praticaphp.
@@ -10,6 +11,7 @@
 
     */ 
     require_once "configs/liga.php";
+    require_once "regista.php";
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +37,8 @@
                     <input type="text" placeholder="Descrição" id="descricao" name="descricao" required><br>
                     <input type="submit" value="Registar">
             </form>
-            <div class="mensagens">
-                <p>Mensagem Surge aqui</p>
+            <div class="mensagens <?php echo $_SESSION["tipo"]; ?>">
+                <p><?= $_SESSION["msg"]?></p>
             </div>
         </div>
     </div>
