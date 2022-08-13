@@ -52,11 +52,13 @@ form input[type="submit"] {
     position: absolute;
     bottom: 10px;
     color: rgb(44, 28, 3);
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
+    visibility: hidden; 
 }
 
-.mensagens.sucess {
+.mensagens.sucesso {
     background: rgb(106, 209, 106);
     border: 1px solid rgb(162, 211, 162);
+    visibility: visible;
 }
