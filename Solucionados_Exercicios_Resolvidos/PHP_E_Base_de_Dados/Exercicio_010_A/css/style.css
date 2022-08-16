@@ -32,10 +32,6 @@ body {
     height: 100%;
 }
 
-.container .formBx form label {
-    margin-right: 15px;
-}
-
 .container .formBx form input {
     display: flex;   
     text-indent: 10px;
