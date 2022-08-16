@@ -15,7 +15,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 350px;
     height: 450px;
@@ -27,14 +27,16 @@ body {
 .container .formBx {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
 }
 
 .container .formBx form label {
     margin-right: 15px;
+
 }
 .container .formBx form input {
     margin-bottom: 20px;
+    align-items: flex-end;
 }
