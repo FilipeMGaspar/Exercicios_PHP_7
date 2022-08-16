@@ -47,4 +47,5 @@ body {
 
 .container .formBx form input[type="submit"] {
     padding: 10px 15px;
+    text-indent: 0;
 }
