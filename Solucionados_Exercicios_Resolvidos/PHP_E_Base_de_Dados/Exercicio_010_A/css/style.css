@@ -16,11 +16,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 350px;
     height: 450px;
     background: #fff;
 }
 
 .formBx {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
 }
