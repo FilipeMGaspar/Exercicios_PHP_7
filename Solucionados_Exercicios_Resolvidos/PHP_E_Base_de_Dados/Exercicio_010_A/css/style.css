@@ -34,14 +34,10 @@ body {
 
 .container .formBx form label {
     margin-right: 15px;
-
 }
 
 .container .formBx form input {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
+    display: flex;   
     text-indent: 10px;
 }
 
