@@ -22,7 +22,7 @@ body {
     background: #fff;
 }
 
-.formBx {
+.container .formBx {
     display: flex;
     align-items: center;
     justify-content: center;
