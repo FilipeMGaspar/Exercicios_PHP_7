@@ -14,4 +14,9 @@ body {
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: 450px;
+    background: #fff;
 }
