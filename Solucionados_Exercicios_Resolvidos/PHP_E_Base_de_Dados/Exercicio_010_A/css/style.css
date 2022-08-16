@@ -39,6 +39,6 @@ body {
 .container .formBx form input {
     display: flex;
     margin-bottom: 20px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
