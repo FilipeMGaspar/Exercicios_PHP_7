@@ -10,7 +10,8 @@
         custo           20                 4.6
 
     */
-    
+    require_once "configs/liga.php";
+
 ?>
 
 <!DOCTYPE html>
