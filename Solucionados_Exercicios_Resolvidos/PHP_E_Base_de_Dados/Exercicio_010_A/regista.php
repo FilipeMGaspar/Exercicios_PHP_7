@@ -7,4 +7,7 @@
 
     $stmt = $conn->prepare("INSERT INTO cobradores (nome. servico, custo) VALUES (?, ? ,?)");
     $stmt->bind_param("ssd", $nome, $servico, $custo);
-    
+    $stmt->execute();
+
+    $stmt->close();
+    $conn->close();
