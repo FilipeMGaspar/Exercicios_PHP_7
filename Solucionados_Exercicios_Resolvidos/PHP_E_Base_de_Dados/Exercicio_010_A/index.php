@@ -33,7 +33,7 @@
                 <label for="servico">Serviço: </label>
                 <input type="text" name="servico" id="servico" placeholder="Serviço" required><br>
                 <label for="custo">Valor: </label>
-                <input type="number" name="custo" id="cust" value="0" min="0" step="0.1" required><br>
+                <input type="number" name="custo" id="cust" value="0" min="0" step="0.01" required><br>
                 <input type="submit" value="Registar">
             </form>
         </div>
