@@ -28,6 +28,7 @@
 <body>
     <div class="container">
         <div class="msgs">
+            <p>Olá</p>
         <?php
             if(!empty($_SESSION["msg"])){
                 echo "<h3>" . $_SESSION["msg"] . "</h3>"; 

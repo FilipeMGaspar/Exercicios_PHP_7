@@ -27,10 +27,8 @@ body {
 .container .msgs {
     position: absolute;
     top: 20px;
-    padding: 15px;
-    background: greenyellow;
-    width: 80%;
-    height: 25px;
+    left: 50px;
+    background: red;
 }
 
 .container .formBx {
