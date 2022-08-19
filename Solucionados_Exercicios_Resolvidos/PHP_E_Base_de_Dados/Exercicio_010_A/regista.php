@@ -1,4 +1,5 @@
 <?php
+  session_start();
     require_once "configs/liga.php";
 
     $nome = filter_input(INPUT_POST, "nome");
