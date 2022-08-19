@@ -24,15 +24,6 @@ body {
     box-shadow: 5px 15px 25px rgba(20, 4, 4, 0.8);
 }
 
-.container .mensagens {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    height: 25px;
-    background: red;
-}
-
 .container .formBx {
     display: flex;
     align-items: center;

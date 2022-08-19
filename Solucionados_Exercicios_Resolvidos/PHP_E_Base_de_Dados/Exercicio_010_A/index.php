@@ -27,14 +27,6 @@
 </head>
 <body>
     <div class="container">
-        <div class="mensagens">
-            <p>Olá</p>
-        <?php
-            if(!empty($_SESSION["msg"])){
-                echo "<h3>" . $_SESSION["msg"] . "</h3>"; 
-            }  
-        ?>
-        </div>
         
         <div class="formBx">
             <form action="regista.php" method="post">
@@ -46,6 +38,12 @@
                 <input type="number" name="custo" id="cust" value="0" min="0" step="0.01" required><br>
                 <input type="submit" value="Registar">
             </form>
+
+            <?php
+                if(!empty($_SESSION["msg"])){
+                    echo "<h3>" . $_SESSION["msg"] . "</h3>"; 
+                }  
+            ?>
         </div>
     </div>
     <?php
