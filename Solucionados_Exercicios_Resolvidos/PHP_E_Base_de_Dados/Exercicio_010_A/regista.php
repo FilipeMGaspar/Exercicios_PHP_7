@@ -15,6 +15,6 @@
     $stmt->close();
     $conn->close();
 
-    $_SESSION["msg"] = "Registo efetuado Com sucesso";
+    $_SESSION["msg"] = "Registo efetuado com sucesso!";
     $_SESSION["tipo"] = "sucesso";
     header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
