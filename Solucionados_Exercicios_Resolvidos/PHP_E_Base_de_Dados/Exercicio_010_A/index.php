@@ -39,13 +39,12 @@
                 <input type="submit" value="Registar">
             </form>
 
+            <div class="mensagens">
             <?php
                 if(!empty($_SESSION["msg"])){
-                    echo "<h3>" . $_SESSION["msg"] . "</h3>"; 
+                    echo "<h4>" . $_SESSION["msg"] . "</h4>"; 
                 }  
             ?>
-            <div class="mensagens">
-                Teste
             </div>
         </div>
     </div>

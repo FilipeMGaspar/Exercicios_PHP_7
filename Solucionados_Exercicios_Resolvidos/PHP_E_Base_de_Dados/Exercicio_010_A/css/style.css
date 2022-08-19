@@ -54,4 +54,5 @@ body {
     background: rgb(178, 228, 178);
     color: rgb(2, 85, 2);
     border-radius: 5px;
+    visibility: hidden;
 }
