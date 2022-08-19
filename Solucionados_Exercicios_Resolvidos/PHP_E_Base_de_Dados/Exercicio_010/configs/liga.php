@@ -1,4 +1,6 @@
 <?php
+  
+
     //Ligação á base de dados
     $host = "localhost";
     $user = "root";
