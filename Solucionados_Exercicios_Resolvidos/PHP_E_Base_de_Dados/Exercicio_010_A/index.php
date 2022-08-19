@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="msgs">
+        <div class="mensagens">
             <p>Olá</p>
         <?php
             if(!empty($_SESSION["msg"])){
