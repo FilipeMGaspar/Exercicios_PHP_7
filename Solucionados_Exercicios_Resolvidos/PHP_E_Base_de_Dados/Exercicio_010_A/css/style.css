@@ -51,6 +51,7 @@ body {
     flex-direction: column;
     width: 20%;
     height: 25px;
-    background: rgb(86, 139, 86);
-    border-radius: 8px;
+    background: rgb(178, 228, 178);
+    color: rgb(2, 85, 2);
+    border-radius: 5px;
 }
