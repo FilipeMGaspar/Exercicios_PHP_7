@@ -10,8 +10,8 @@
         custo           20                 4.6
 
     */
-    require_once "configs/liga.php";
     session_start();
+    require_once "configs/liga.php";
 
 ?>
 
@@ -27,6 +27,12 @@
 </head>
 <body>
     <div class="container">
+        <?php
+            if(!empty($_SESSION["msg"])){
+                echo "<h3>" . $_SESSION["msg"] . "</h3>"; 
+            }
+            
+        ?>
         <div class="formBx">
             <form action="regista.php" method="post">
                 <label for="nome">Nome: </label>
@@ -40,7 +46,7 @@
         </div>
     </div>
     <?php
-    
+
         session_unset();
     ?>
 </body>
