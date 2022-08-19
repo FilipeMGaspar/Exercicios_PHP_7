@@ -11,6 +11,7 @@
 
     */
     require_once "configs/liga.php";
+    session_start();
 
 ?>
 
@@ -38,5 +39,9 @@
             </form>
         </div>
     </div>
+    <?php
+    
+        session_unset();
+    ?>
 </body>
 </html>
