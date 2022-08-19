@@ -27,12 +27,14 @@
 </head>
 <body>
     <div class="container">
+        <div class="msgs">
         <?php
             if(!empty($_SESSION["msg"])){
                 echo "<h3>" . $_SESSION["msg"] . "</h3>"; 
-            }
-            
+            }  
         ?>
+        </div>
+        
         <div class="formBx">
             <form action="regista.php" method="post">
                 <label for="nome">Nome: </label>
