@@ -48,4 +48,9 @@ body {
 
 .container .mensagens {
     margin-top: 25px;
+    visibility: hidden;
+}
+
+.container .mensagens.sucesso {
+    
 }
