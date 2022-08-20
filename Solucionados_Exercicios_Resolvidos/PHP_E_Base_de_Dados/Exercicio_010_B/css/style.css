@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 15px 10px rgba(0, 0, 0, 0.8);
 }
 
 .container h3 {
