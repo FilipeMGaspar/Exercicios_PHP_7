@@ -39,7 +39,13 @@ body {
 }
 
 .container .formBX form .inputs input[type="submit"] {
+    margin-top: 10px;
+    margin-left: 25%;
     height: auto;
     padding: 10px 15px;
     text-indent: 0;
+}
+
+.container .mensagens {
+    margin-top: 25px;
 }
