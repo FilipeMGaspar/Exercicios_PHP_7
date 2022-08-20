@@ -9,3 +9,10 @@
             10            Mário           m               Portugal   
             11            Luisa           f               Espanha
 */
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "praticaphp";
+
+$conn = new mysqli($host, $user, $pass, $db);
