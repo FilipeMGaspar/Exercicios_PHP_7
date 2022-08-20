@@ -16,7 +16,7 @@ body {
     position: relative;
     background: #fff;
     width: 350px;
-    height: 350px;
+    height: 380px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -31,4 +31,15 @@ body {
 .container .formBX form .inputs {
     margin-bottom: 15px;
    
+}
+
+.container .formBX form .inputs input {
+    text-indent: 5px;
+    height: 25px;
+}
+
+.container .formBX form .inputs input[type="submit"] {
+    height: auto;
+    padding: 10px 15px;
+    text-indent: 0;
 }
