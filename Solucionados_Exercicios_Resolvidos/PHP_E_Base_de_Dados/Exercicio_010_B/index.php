@@ -39,17 +39,15 @@
                 </div>
             </form>
 
-            <div class="mensagens sucesso">
-                <h4><?php
-                        if(!empty($_SESSION["msg"])) {
-                            echo $_SESSION["msg"]; 
-                        }
-                        
-                     ?>
-                </h4>
+            <?php if(!empty($_SESSION["msg"])): ?>
+            <div class="mensagens <?= $_SESSION["tipoOp"] ?>">
+                <h4><?= $_SESSION["msg"] ?></h4>
             </div>
-            
+            <?php endif; ?>
         </div>
     </div>
+    <?php
+        session_unset();
+    ?>
 </body>
 </html>

@@ -5,7 +5,6 @@
 
     $data = $_POST;
 
-    //print_r($data);
-   $_SESSION["msg"] = "Registo efetuado com sucesso!";
-
+    $_SESSION["msg"] = "Registo efetuado com sucesso!";
+    $_SESSION["tipoOp"] = "sucesso";
     header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
