@@ -1,5 +1,5 @@
 <?php
- 
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -40,7 +40,7 @@
             </form>
 
             <div class="mensagens sucesso">
-                <h4><?php echo "Registo efetuado com sucesso" ?></h4>
+                <h4><?php echo $_SESSION["msg"]; ?></h4>
             </div>
             
         </div>
