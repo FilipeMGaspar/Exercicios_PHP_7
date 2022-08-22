@@ -6,3 +6,5 @@
 
     //print_r($data);
     $msgTxt = new Mensagens();
+    $msgTxt->setMsg("Registo efetuado com sucesso!");
+    echo $msgTxt->getMsg();
