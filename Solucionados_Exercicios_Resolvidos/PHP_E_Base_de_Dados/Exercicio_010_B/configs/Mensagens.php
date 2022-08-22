@@ -20,8 +20,9 @@
       return $this->type;
     }
 
-    public function __construct($msg, $tipo)
-    {
-      
+    public function msgs($txtMsg, $tipoOp) {
+      $this->setMsg($txtMsg);
+      $this->setType($tipoOp);
     }
+
  }
