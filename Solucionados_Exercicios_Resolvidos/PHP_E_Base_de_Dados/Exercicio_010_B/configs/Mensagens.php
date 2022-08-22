@@ -4,7 +4,7 @@
     private $msg;
     private $type;
 
-    public function setMsg($mensagem) {
+    private function setMsg($mensagem) {
       $this->msg = $mensagem;
     }
 
@@ -12,4 +12,16 @@
       return $this->msg;
     }
 
+    private function setType($tipo) {
+      $this->type = $tipo;
+    }
+
+    public function getType() {
+      return $this->type;
+    }
+
+    public function __construct($msg, $tipo)
+    {
+      
+    }
  }
