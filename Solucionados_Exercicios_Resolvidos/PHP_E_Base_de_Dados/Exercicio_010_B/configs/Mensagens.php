@@ -20,7 +20,7 @@
       return $this->type;
     }
 
-    public function msgs($txtMsg, $tipoOp) {
+    public function registaMsgs($txtMsg, $tipoOp) {
       $this->setMsg($txtMsg);
       $this->setType($tipoOp);
     }
