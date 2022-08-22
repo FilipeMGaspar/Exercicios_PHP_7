@@ -1,3 +1,7 @@
+<?php
+    require_once "configs/Mensagens.php";
+    $mostraMsg = new Mensagens();
+?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -37,7 +41,7 @@
             </form>
 
             <div class="mensagens sucesso">
-                <h4>Mensagens aqui</h4>
+                <h4><?php echo $mostraMsg->getMsg(); ?></h4>
             </div>
             
         </div>
