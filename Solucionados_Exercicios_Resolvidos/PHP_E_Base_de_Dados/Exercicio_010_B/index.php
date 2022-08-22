@@ -1,6 +1,5 @@
 <?php
-    require_once "configs/Mensagens.php";
-    $mostraMsg = new Mensagens();
+ 
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -41,7 +40,7 @@
             </form>
 
             <div class="mensagens sucesso">
-                <h4><?php echo $mostraMsg->getMsg(); ?></h4>
+                <h4><?php echo "Registo efetuado com sucesso" ?></h4>
             </div>
             
         </div>
