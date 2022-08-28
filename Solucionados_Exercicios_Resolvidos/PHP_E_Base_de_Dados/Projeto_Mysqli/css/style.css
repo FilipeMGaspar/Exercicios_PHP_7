@@ -26,5 +26,12 @@ body {
 }
 
 .container .formbx {
-    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .formbx form .inputs {
+    margin-bottom: 15px;
 }
