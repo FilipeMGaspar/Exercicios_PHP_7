@@ -15,4 +15,6 @@
         echo $email;
         echo "<br>";
         echo $pass;
+    } else {
+        header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
     }
