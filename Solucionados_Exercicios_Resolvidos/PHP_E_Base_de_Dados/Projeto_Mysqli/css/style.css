@@ -23,6 +23,8 @@ body {
     background: #fff;
     width: 350px;
     height: 450px;
+    border-radius: 8px;
+    box-shadow: 0  10px 15px rgba(70, 7, 7, 0.8);
 }
 
 .container .formbx {
@@ -43,4 +45,17 @@ body {
 
 .container .formbx form .inputs input {
     text-indent: 10px;
+    padding: 10px;
+}
+
+.container .formbx form .inputs input::placeholder {
+  color: rgb(97, 6, 36);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.container .formbx form .inputs input[type="submit"] {
+    margin-left: 30%;
+    text-indent: 0;
+    padding: 10px 15px;
 }
