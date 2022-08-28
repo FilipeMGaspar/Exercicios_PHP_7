@@ -1,6 +1,6 @@
 <?php
 
-    $formType = filter_input(INPUT_POST, "type");
+    $formType = filter_input(INPUT_POST, "tipoform");
     $nome = filter_input(INPUT_POST, "name");
     $sobrenome = filter_input(INPUT_POST, "lastname");
     $email = filter_input(INPUT_POST, "email");
@@ -9,3 +9,7 @@
 
     echo $formType;
     echo "<br>";
+    echo $nome;
+    echo "<br>";
+    echo $sobrenome;
+    
