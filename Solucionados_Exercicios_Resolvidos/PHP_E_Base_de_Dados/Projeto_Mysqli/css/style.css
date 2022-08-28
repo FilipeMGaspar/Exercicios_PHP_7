@@ -32,6 +32,15 @@ body {
     justify-content: center;
 }
 
+.container .formbx form h2 {
+    margin-bottom: 20px;
+    color: rgb(1, 1, 148);
+}
+
 .container .formbx form .inputs {
     margin-bottom: 15px;
+}
+
+.container .formbx form .inputs input {
+    text-indent: 10px;
 }
