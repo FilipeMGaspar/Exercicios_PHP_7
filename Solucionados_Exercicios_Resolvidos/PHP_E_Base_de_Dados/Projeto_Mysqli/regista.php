@@ -7,9 +7,12 @@
     $pass = filter_input(INPUT_POST, "password");
     $confirmPass = filter_input(INPUT_POST, "confirmpass");
 
-    echo $formType;
-    echo "<br>";
-    echo $nome;
-    echo "<br>";
-    echo $sobrenome;
-    
+    if ($formType === "registar") {
+        echo $nome;
+        echo "<br>";
+        echo $sobrenome;
+        echo "<br>";
+        echo $email;
+        echo "<br>";
+        echo $pass;
+    }
