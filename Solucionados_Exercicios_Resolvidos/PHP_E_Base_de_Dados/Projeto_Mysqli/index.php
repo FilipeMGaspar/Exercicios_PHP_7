@@ -45,7 +45,7 @@
                     <input type="submit" value="Registar">
                 </div>
                 <?php if(!empty($_SESSION["msg"])): ?>    
-                <p class="msg erro"><?= $_SESSION["msg"] ?></p>
+                <p class="msg <?= $_SESSION["type"] ?>"><?= $_SESSION["msg"] ?></p>
                 <?php endif; ?>
             </form>
         </div>
