@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     $formType = filter_input(INPUT_POST, "tipoform");
     $nome = filter_input(INPUT_POST, "name");
