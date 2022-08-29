@@ -74,3 +74,10 @@ body {
     border: 1px solid rgb(171, 240, 171);
     visibility: visible;
 }
+
+.container .formbx form p.erro {
+    background: rgb(61, 1, 1);
+    color: rgb(248, 39, 39);
+    border: 1px solid rgb(240, 171, 171);
+    visibility: visible;
+}
