@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 350px;
+    height: 490px;
+    border-radius: 8px;
+    box-shadow: 0  10px 15px rgba(70, 7, 7, 0.8);
+}
+
+.container .formbx {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .formbx form h2 {
+    margin-bottom: 20px;
+    color: rgb(1, 1, 148);
+}
+
+.container .formbx form .inputs {
+    margin-bottom: 15px;
+}
+
+.container .formbx form .inputs input {
+    text-indent: 10px;
+    padding: 10px;
+}
+
+.container .formbx form .inputs input::placeholder {
+  color: rgb(97, 6, 36);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.container .formbx form .inputs input[type="submit"] {
+    margin-left: 30%;
+    text-indent: 0;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.container .formbx form p {
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    padding: 5px 10px;
+}
+
+.container .formbx form p.sucesso {
+    background: rgb(1, 61, 1);
+    color: rgb(59, 218, 59);
+    border: 1px solid rgb(171, 240, 171);
+    visibility: visible;
+}
+
+.container .formbx form p.erro {
+    background: rgb(61, 1, 1);
+    color: rgb(255, 104, 104);
+    border: 1px solid rgb(240, 171, 171);
+    visibility: visible;
+}
