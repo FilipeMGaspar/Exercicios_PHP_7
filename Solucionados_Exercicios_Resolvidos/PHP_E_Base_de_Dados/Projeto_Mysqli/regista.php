@@ -33,7 +33,7 @@
         
         //$passDificil = md5($passwd);
         //$passDificil = sha1($passwd);
-        // $passDificil = base64_encode($passwd);
+        $passDificil = base64_encode($passwd);
         // $passDificil = password_hash($passDificil, PASSWORD_DEFAULT);;
         return $passDificil;
     }
