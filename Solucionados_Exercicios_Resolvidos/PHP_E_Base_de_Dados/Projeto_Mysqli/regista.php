@@ -28,6 +28,7 @@ require_once "configs/liga.php";
                     $stmt->execute();
                     $_SESSION["msg"] = "Dados registados com sucesso";
                     $_SESSION["type"] = "sucesso";
+                    header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                 } catch (Exception $e){
                     $error = $e->getMessage();
                     $_SESSION["msg"] = "Não foi possivel registar os dados!";
