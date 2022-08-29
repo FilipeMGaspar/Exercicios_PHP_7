@@ -64,6 +64,6 @@ body {
 .container .formbx form p {
     margin-top: 25px;
     text-align: center;
-    background: green;
     border-radius: 5px;
+    visibility: hidden;
 }
