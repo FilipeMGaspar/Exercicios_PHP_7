@@ -24,20 +24,31 @@ require_once "configs/liga.php";
                 $stmt = $conn->prepare("INSERT INTO users (nome, sobrenome, email, password) VALUES (?, ?, ?, ?)");
                 $stmt->bind_param("ssss", $nome, $sobrenome, $email, $finalPassword);
                 
-                
+                try {
+                    $stmt->execute();
+                    $_SESSION["msg"] = "Dados registados com sucesso";
+                    $_SESSION["type"] = "sucesso";
+                } catch (Exception $e){
+                    $error = $e->getMessage();
+                    $_SESSION["msg"] = "Não foi possivel registar os dados!";
+                    $_SESSION["type"] = "erro";
+                }
 
             } else { // Se as senhas não conferem / não são iguais vai ser redirecionado de volta ao formulário
                 header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                 $_SESSION["msg"] = "As passwords devem ser iguais!";
+                $_SESSION["type"] = "erro";
             }
 
         } else {
-            header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
             $_SESSION["msg"] = "Todos os dados devem ser preenchidos!";
+            $_SESSION["type"] = "erro";
+            header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página           
         }
 
     } else {
         $_SESSION["msg"] = "Dados do formulário inválidos. Erro de envio!";
+        $_SESSION["type"] = "erro";
         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
     }
 
