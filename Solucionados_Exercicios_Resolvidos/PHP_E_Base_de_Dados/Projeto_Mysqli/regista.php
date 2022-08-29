@@ -28,7 +28,7 @@ session_start();
                 echo $finalPassword;
             } else { // Se as senhas não conferem / não são iguais vai ser redirecionado de volta ao formulário
                 header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
-                $_SESSION["msg"] = "As passwords devem ser iguias!";
+                $_SESSION["msg"] = "As passwords devem ser iguais!";
             }
 
         } else {

@@ -21,7 +21,7 @@
                 <input type="hidden" name="tipoform" value="registar">
                 
                 <div class="inputs">
-                    <input type="text" name="name" id="name" placeholder="Nome">
+                    <input type="text" name="name" id="name" placeholder="Nome" required>
                 </div>
 
                 <div class="inputs">
