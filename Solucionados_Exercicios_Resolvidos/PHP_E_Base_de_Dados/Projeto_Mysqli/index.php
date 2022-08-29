@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -41,8 +44,9 @@
                 <div class="inputs">
                     <input type="submit" value="Registar">
                 </div>
-
-                <p class="msg erro">Mensagem aqui</p>
+                <?php if(!empty($_SESSION["msg"])): ?>    
+                <p class="msg erro"><?= $_SESSION["msg"] ?></p>
+                <?php endif; ?>
             </form>
         </div>
     </div>
