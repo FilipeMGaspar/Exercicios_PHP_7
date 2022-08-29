@@ -50,5 +50,9 @@
             </form>
         </div>
     </div>
+    <?php
+        session_unset();
+        session_destroy();
+    ?>
 </body>
 </html>
