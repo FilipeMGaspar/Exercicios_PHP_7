@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once "configs/liga.php";
+
     $formType = filter_input(INPUT_POST, "tipoform");
     $nome = filter_input(INPUT_POST, "name");
     $sobrenome = filter_input(INPUT_POST, "lastname");
@@ -18,14 +20,12 @@ session_start();
                 // Criptografia de password
                 $finalPassword = dificultPass($pass);
 
+                //Inserir dados na base de dados
+                $stmt = $conn->prepare("INSERT INTO users (nome, sobrenome, email, password) VALUES (?, ?, ?, ?)");
+                $stmt->bind_param("ssss", $nome, $sobrenome, $email, $finalPassword);
+                
+                
 
-                echo $nome;
-                echo "<br>";
-                echo $sobrenome;
-                echo "<br>";
-                echo $email;
-                echo "<br>";
-                echo $finalPassword;
             } else { // Se as senhas não conferem / não são iguais vai ser redirecionado de volta ao formulário
                 header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                 $_SESSION["msg"] = "As passwords devem ser iguais!";
