@@ -12,8 +12,12 @@
         
         //Verifica se as senhas conferem / são iguais
         if($pass === $confirmPass) {
+            
+            
             // Criptografia de password
             $finalPassword = dificultPass($pass);
+
+
             echo $nome;
             echo "<br>";
             echo $sobrenome;
@@ -29,11 +33,9 @@
         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
     }
 
-    function dificultPass($passwd) {
-        
-        //$passDificil = md5($passwd);
-        //$passDificil = sha1($passwd);
-        $passDificil = base64_encode($passwd);
-        // $passDificil = password_hash($passDificil, PASSWORD_DEFAULT);;
+    function dificultPass($passwd) {        
+        $passDificil = sha1($passwd);
+        $passDificil = base64_encode($passDificil);
+        $passDificil = password_hash($passDificil, PASSWORD_DEFAULT);;
         return $passDificil;
     }
