@@ -58,4 +58,12 @@ body {
     margin-left: 30%;
     text-indent: 0;
     padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.container .formbx form p {
+    margin-top: 25px;
+    text-align: center;
+    background: green;
+    border-radius: 5px;
 }
