@@ -4,65 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 10 C | PHP e Base de Dados</title>
+    <title>PHP e Base de Dados - Exercício 010 D</title>
 
-    <!-- CSS Projeto -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="title-text">
-            <div class="title login">Iniciar sessão</div>
-
-            <div class="title signup">Registo de utilizador</div>
+            <div class="title login">Entrar</div>
+            <div class="title signup">Registar</div>
         </div>
 
         <div class="form-container">
+            
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">Entrar</label>
+                <label for="signup" class="slide signup">Registar</label>
+                <div class="slide-tab"></div>
+            </div>
+
             <div class="form-inner">
-
-                <form action="#" method="post" class="login">
-
+                 <!-- Login form -->
+                <form action="#" class="login">                    
+                     
                     <div class="field">
-                        <input type="email" name="email" id="email" placeholder="Endereço de Email" required>
+                        <input type="text" name="email" id="email" placeholder="Email Address" required>
                     </div>
 
                     <div class="field">
-                        <input type="password" name="pass" id="pass" placeholder="Password" required>
+                        <input type="pasword" name="password" id="password" placeholder="Password" required>
                     </div>
 
-                    <div class="pass-link"><a href="#">Esqueceu a password?</a></div>
+                    <div class="pass-link"><a href="#">Esqueceu password?</a></div>
 
                     <div class="field">
-                       <input type="submit" value="Entrar">
+                        <input type="submit" value="Login">
                     </div>
 
-                    <div class="signup-link">Não tem conta? <a href="#">Registe-se!</a></div>
+                    <div class="signup-link">Não tem conta? <a href="#"> Registe agora</a></div>
                 </form>
 
-                <form action="#" method="post" class="signup">
-
+                <!--  Signup form -->
+                <form action="#" class="signup">
+                    
                     <div class="field">
-                        <input type="email" name="email" id="email" placeholder="Endereço de Email" required>
+                        <input type="text" name="email" id="email" placeholder="Email Address" required>
                     </div>
 
                     <div class="field">
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input type="pasword" name="password" id="password" placeholder="Password" required>
                     </div>
 
                     <div class="field">
-                        <input type="password" name="confirmpass" id="confirmpass" placeholder="Password" required>
+                        <input type="pasword" name="confirmpassword" id="confirmpassword" placeholder="confirm Password" required>
                     </div>
 
                     <div class="field">
-                       <input type="submit" value="Registar">
+                        <input type="submit" value="Registar">
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Javascript -->
+    <!-- javascript -->
     <script src="js/script.js"></script>
 </body>
 </html>
