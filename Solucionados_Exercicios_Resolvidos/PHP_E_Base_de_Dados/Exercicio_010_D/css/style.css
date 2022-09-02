@@ -59,4 +59,27 @@ html, body {
     border-bottom-width: 2px;
 }
 
-.form-inner form 
+.form-inner form .pass-link {
+    margin-top: 5px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+form .field input[type="submit"] {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
