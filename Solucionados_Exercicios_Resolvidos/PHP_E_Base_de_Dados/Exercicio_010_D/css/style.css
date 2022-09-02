@@ -34,4 +34,29 @@ html, body {
     text-align: center;
 }
 
-.wrapper
+.wrapper .form-container {
+    width: 100%;
+}
+
+.form-container .form-inner form {
+
+}
+
+.form-inner form .field {
+ height: 50%;
+ width: 100%;
+ margin-top: 20px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    border-bottom-width: 2px;
+}
+
+.form-inner form 
