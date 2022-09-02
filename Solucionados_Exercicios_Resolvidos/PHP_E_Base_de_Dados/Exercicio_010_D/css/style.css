@@ -10,8 +10,9 @@
 html, body {
     display: grid;
     height: 100%;
+    width: 100%;
     place-items: center;
-    background: #f2f2f2;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
 }
 
 .wrapper {
@@ -57,10 +58,20 @@ html, body {
     border-radius: 5px;
     border: 1px solid lightgray;
     border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+
+.form-inner form .signup-link input:focus {
+    border-color: #fc83bb;
 }
 
 .form-inner form .pass-link {
     margin-top: 5px;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 30px;
 }
 
 .form-inner form .pass-link a,
