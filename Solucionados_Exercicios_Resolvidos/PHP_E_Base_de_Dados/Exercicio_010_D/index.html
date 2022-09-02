@@ -27,7 +27,9 @@
 
             <div class="form-inner">
                  <!-- Login form -->
-                <form action="#" class="login">                    
+                <form action="#" class="login"> 
+
+                    <input type="hidden" name="type" value="login">                   
                      
                     <div class="field">
                         <input type="text" name="email" id="email" placeholder="Email Address" required>
@@ -40,7 +42,7 @@
                     <div class="pass-link"><a href="#">Esqueceu password?</a></div>
 
                     <div class="field">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Entrar">
                     </div>
 
                     <div class="signup-link">Não tem conta? <a href="#"> Registe agora</a></div>
@@ -48,6 +50,8 @@
 
                 <!--  Signup form -->
                 <form action="#" class="signup">
+
+                    <input type="hidden" name="type" value="signup">
                     
                     <div class="field">
                         <input type="text" name="email" id="email" placeholder="Email Address" required>
