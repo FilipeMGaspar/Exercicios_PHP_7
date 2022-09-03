@@ -10,24 +10,37 @@
 
         if($type === "login") {
 
-            $stmt = $conn->prepare("SELECT 	idUsers, email, email FROM utilizadores");
+            $stmt = $conn->prepare("SELECT 	idUsers, email, email FROM utilizadores WHERE email = ? LIMIT 1");
+            $stmt->bind_param("s", $email);
 
             try {
+               
                 $stmt->execute();
-                //$_SESSION["msg"] = "Dados registados com sucesso";
-                //$_SESSION["type"] = "sucesso";
-                header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
+               
             } catch (Exception $e){
                 $error = $e->getMessage();
                // $_SESSION["msg"] = "Não foi possivel registar os dados!";
                // $_SESSION["type"] = "erro";
             }
 
-            echo $type;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $pass;
+            $dados = $stmt->get_result();
+
+            if($dados->num_rows > 0) {
+                print_r($dados);
+            } else {
+                
+                print_r($dados);
+
+                echo "<br><br> Conta não encontrada!";
+                echo "<br>";
+                echo $type;
+                echo "<br>";
+                echo $email;
+                echo "<br>";
+                echo $pass;
+            }
+           
+
         }
     
         if($type === "signup") {
