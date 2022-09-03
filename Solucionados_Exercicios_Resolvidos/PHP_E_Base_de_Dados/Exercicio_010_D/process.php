@@ -5,20 +5,27 @@
     $pass = filter_input(INPUT_POST, "password");
     $confirmPass = filter_input(INPUT_POST, "confirmpassword");
     
-    if($type === "login") {
-        echo $type;
-        echo "<br>";
-        echo $email;
-        echo "<br>";
-        echo $pass;
-    }
+    if($type === "login" || $type === "signup") {
 
-    if($type === "signup") {
-        echo $type;
-        echo "<br>";
-        echo $email;
-        echo "<br>";
-        echo $pass;
-        echo "<br>";
-        echo $confirmPass;
+        if($type === "login") {
+            echo $type;
+            echo "<br>";
+            echo $email;
+            echo "<br>";
+            echo $pass;
+        }
+    
+        if($type === "signup") {
+            echo $type;
+            echo "<br>";
+            echo $email;
+            echo "<br>";
+            echo $pass;
+            echo "<br>";
+            echo $confirmPass;
+        }
+
+    } else {
+        echo "Formulário desconhecido!";
     }
+  
