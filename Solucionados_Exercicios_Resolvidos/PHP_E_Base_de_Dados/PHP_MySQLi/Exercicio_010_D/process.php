@@ -26,6 +26,13 @@
                 echo "Conta não encontrada!"; 
                 //Efetua o registo
                 
+                if($pass === $confirmPass) {
+                    $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
+                    $stmt->bind_param("ss", $email, $pass);
+                } else {
+                    echo "As passwords não correspondem!"; 
+                }
+                
            }
         }
 
