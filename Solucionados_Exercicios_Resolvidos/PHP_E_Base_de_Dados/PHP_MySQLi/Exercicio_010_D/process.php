@@ -21,18 +21,18 @@
         if($type === "signup") {
 
             if (findByEmail($email, $conn)) {
-                echo "Conta encontrada! Email ou password inválido!"; // Retorna erro de conta ou password
+                echo "Tente outro email ou password!"; // Retorna erro de conta ou password
            } else {
                 
                 if($pass === $confirmPass) {
-                    
+
                     $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
                     $finalPassword = dificultaPass($pass);
                     $stmt->bind_param("ss", $email, $finalPassword);
 
                     try {           
                         $stmt->execute();    
-                        echo "Dados Registados com sucesso!";       
+                        echo "Dados registados com sucesso!";       
                     } catch (Exception $e){
                         $error = $e->getMessage();
                        // $_SESSION["msg"] = "Não foi possivel registar os dados!";
