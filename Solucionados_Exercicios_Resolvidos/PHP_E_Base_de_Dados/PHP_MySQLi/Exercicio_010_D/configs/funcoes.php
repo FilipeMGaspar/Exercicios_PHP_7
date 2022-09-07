@@ -12,6 +12,7 @@
         } catch (Exception $e){
             $error = $e->getMessage();
         }
+        
         $dados = $stmt->get_result();
 
         if($dados->num_rows > 0) {
