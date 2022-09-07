@@ -23,14 +23,12 @@
                     $error = $e->getMessage();
                 } 
 
-                print_r($resultado);
-                
+               echo  $resultado["password"]. "<br>";  
+               $passForm = dificultaPass($pass);
 
-              //  if(){ // Falta implemetar
-                    echo "Seja bem vindo!";
-                /*} else{
-                    echo "Email ou Password inválidos!";
-                }*/
+                if () {
+                    echo "<br>Seja bem vindo!";
+                }
 
            } else {
                 echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
@@ -47,7 +45,7 @@
                 if($pass === $confirmPass) {
 
                     $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
-                    $finalPassword = dificultaPass($pass);
+                    $finalPassword = gerarPasswdHash($pass);
                     $stmt->bind_param("ss", $email, $finalPassword);
 
                     try {           
@@ -93,10 +91,16 @@
 
     }
 
-    function dificultaPass($passwd) {
+    function criptoPass($passwd) { // encripta a password
         $secPass = md5($passwd);
         $secPass = base64_encode($secPass);
-        $secPass = password_hash($secPass, PASSWORD_DEFAULT);
 
         return $secPass;
     }
+
+    function gerarPasswdHash($palavraPass) {
+        $txt = criptoPass($palavraPass);
+        $hash = password_hash($txt, PASSWORD_DEFAULT);
+    }
+
+    
