@@ -25,9 +25,20 @@
            } else {
                 
                 if($pass === $confirmPass) {
+                    
                     $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
-                   // $stmt->bind_param("ss", $email, $finalPassword);
-                   echo "Pass Final = " . $finalPassword . "<br>";
+                    $finalPassword = dificultaPass($pass);
+                    $stmt->bind_param("ss", $email, $finalPassword);
+
+                    try {           
+                        $stmt->execute();    
+                        echo "Dados Registados com sucesso!";       
+                    } catch (Exception $e){
+                        $error = $e->getMessage();
+                       // $_SESSION["msg"] = "Não foi possivel registar os dados!";
+                       // $_SESSION["type"] = "erro";
+                    }                    
+                   
                 } else {
                     echo "As passwords não correspondem!"; 
                 }
