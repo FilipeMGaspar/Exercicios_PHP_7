@@ -14,18 +14,22 @@
                 //verifica a password recebida com a password guardada na base de dados
                 $stmt = $conn->prepare("SELECT email, password FROM utilizadores WHERE  email = ? LIMIT 1");
                 $stmt->bind_param("s", $email);
-                $stmt->execute();
-
-                $dados = $stmt->get_result();
-
-                $resultado = $dados->fetch_assoc();
+                
+                try {
+                    $stmt->execute();
+                    $dados = $stmt->get_result();
+                    $resultado = $dados->fetch_assoc();
+                } catch (Exception $e){
+                    $error = $e->getMessage();
+                } 
 
                 print_r($resultado);
-               // if(){ // Falta implemetar
+
+                if(password_verify($resultado["password"], dificultaPass($pass))){ // Falta implemetar
                     echo "Seja bem vindo!";
-               /* } else{
+                } else{
                     echo "Email ou Password inválidos!";
-                }*/
+                }
 
            } else {
                 echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
