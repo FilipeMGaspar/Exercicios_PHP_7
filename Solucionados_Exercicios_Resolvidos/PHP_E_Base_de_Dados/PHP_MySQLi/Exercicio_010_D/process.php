@@ -25,6 +25,7 @@
            } else {
                 echo "Conta não encontrada!"; 
                 //Efetua o registo
+                
            }
         }
 
