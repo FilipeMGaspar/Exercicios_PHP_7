@@ -24,12 +24,13 @@
                 } 
 
                 print_r($resultado);
+                
 
-                if(password_verify($resultado["password"], dificultaPass($pass))){ // Falta implemetar
+              //  if(){ // Falta implemetar
                     echo "Seja bem vindo!";
-                } else{
+                /*} else{
                     echo "Email ou Password inválidos!";
-                }
+                }*/
 
            } else {
                 echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
