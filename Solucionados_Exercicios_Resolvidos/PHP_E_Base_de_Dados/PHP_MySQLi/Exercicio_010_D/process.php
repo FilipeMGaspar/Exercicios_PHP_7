@@ -11,9 +11,9 @@
         if($type === "login") {
 
            if (findByEmail($email, $conn)) {
-                echo "Conta encontrada!";
+                echo "Seja bem vindo!";
            } else {
-                echo "Conta não encontrada!"; 
+                echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
            }
 
         }
