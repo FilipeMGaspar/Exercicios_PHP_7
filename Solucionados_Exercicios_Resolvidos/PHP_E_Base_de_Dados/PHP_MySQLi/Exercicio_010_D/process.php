@@ -25,11 +25,9 @@
            } else {
                 
                 if($pass === $confirmPass) {
-                    echo "Conta não encontrada! efetua registo"; 
-                    //Efetua o registo
-                    echo "<br>Passwords ok!";
                     $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
-                    $stmt->bind_param("ss", $email, $pass);
+                   // $stmt->bind_param("ss", $email, $finalPassword);
+                   echo "Pass Final = " . $finalPassword . "<br>";
                 } else {
                     echo "As passwords não correspondem!"; 
                 }
@@ -62,4 +60,12 @@
             return false;
         }
 
+    }
+
+    function dificultaPass($passwd) {
+        $secPass = md5($passwd);
+        $secPass = base64_encode($secPass);
+        $secPass = password_hash($secPass, PASSWORD_DEFAULT);
+
+        return $secPass;
     }
