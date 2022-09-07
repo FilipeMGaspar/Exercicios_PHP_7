@@ -21,12 +21,13 @@
         if($type === "signup") {
 
             if (findByEmail($email, $conn)) {
-                echo "Conta encontrada!"; // Retorna erro de conta ou password
+                echo "Conta encontrada! Email ou password inválido!"; // Retorna erro de conta ou password
            } else {
-                echo "Conta não encontrada!"; 
-                //Efetua o registo
                 
                 if($pass === $confirmPass) {
+                    echo "Conta não encontrada! efetua registo"; 
+                    //Efetua o registo
+                    echo "<br>Passwords ok!";
                     $stmt = $conn->prepare("INSERT INTO utilizadores (email, password) VALUES (?, ?)");
                     $stmt->bind_param("ss", $email, $pass);
                 } else {
@@ -43,7 +44,7 @@
   
     function findByEmail($mail, mysqli $conet) {
 
-        $stmt = $conet->prepare("SELECT 	idUsers, email, email FROM utilizadores WHERE email = ? LIMIT 1");
+        $stmt = $conet->prepare("SELECT idUsers, email, email FROM utilizadores WHERE email = ? LIMIT 1");
         $stmt->bind_param("s", $mail);
 
         try {           
@@ -55,7 +56,7 @@
         }
         $dados = $stmt->get_result();
 
-        if($dados ->num_rows > 0) {
+        if($dados->num_rows > 0) {
             return true;
         } else {
             return false;
