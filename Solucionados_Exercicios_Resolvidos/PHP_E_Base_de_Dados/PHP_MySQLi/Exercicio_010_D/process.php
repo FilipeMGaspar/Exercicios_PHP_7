@@ -101,6 +101,12 @@
     function gerarPasswdHash($palavraPass) {
         $txt = criptoPass($palavraPass);
         $hash = password_hash($txt, PASSWORD_DEFAULT);
+
+        return $hash;
     }
 
-    
+    function testaPassHash($palavraPass, $passwdHash) {
+        $testaPass = password_verify(criptoPass($palavraPass), $passwdHash);
+
+        return $testaPass;
+    }   
