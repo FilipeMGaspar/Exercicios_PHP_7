@@ -60,7 +60,7 @@
   
     function findByEmail($mail, mysqli $conet) {
 
-        $stmt = $conet->prepare("SELECT idUsers, email, email FROM utilizadores WHERE email = ? LIMIT 1");
+        $stmt = $conet->prepare("SELECT email FROM utilizadores WHERE email = ? LIMIT 1");
         $stmt->bind_param("s", $mail);
 
         try {           
