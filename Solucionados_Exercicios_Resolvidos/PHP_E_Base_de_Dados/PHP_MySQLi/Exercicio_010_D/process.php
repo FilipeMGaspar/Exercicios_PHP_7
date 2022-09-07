@@ -12,12 +12,20 @@
 
            if (findByEmail($email, $conn)) {
                 //verifica a password recebida com a password guardada na base de dados
-                
-                if(){ // Falta implemetar
+                $stmt = $conn->prepare("SELECT email, password FROM utilizadores WHERE  email = ? LIMIT 1");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+
+                $dados = $stmt->get_result();
+
+                $resultado = $dados->fetch_assoc();
+
+                print_r($resultado);
+               // if(){ // Falta implemetar
                     echo "Seja bem vindo!";
-                } else{
+               /* } else{
                     echo "Email ou Password inválidos!";
-                }
+                }*/
 
            } else {
                 echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
@@ -28,7 +36,7 @@
         if($type === "signup") {
 
             if (findByEmail($email, $conn)) {
-                echo "Tente outro email ou password!"; // Retorna erro de conta ou password
+                echo "Teste outro Email ou password!"; // Retorna erro de conta ou password
            } else {
                 
                 if($pass === $confirmPass) {
