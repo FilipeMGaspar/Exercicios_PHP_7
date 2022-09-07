@@ -11,7 +11,14 @@
         if($type === "login") {
 
            if (findByEmail($email, $conn)) {
-                echo "Seja bem vindo!";
+                //verifica a password recebida com a password guardada na base de dados
+                
+                if(){
+                    echo "Seja bem vindo!";
+                } else{
+                    echo "Email ou Password inválidos!";
+                }
+
            } else {
                 echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
            }
