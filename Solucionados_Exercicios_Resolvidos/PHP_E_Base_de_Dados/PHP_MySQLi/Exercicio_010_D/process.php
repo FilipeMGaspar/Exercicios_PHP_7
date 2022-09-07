@@ -13,7 +13,7 @@
            if (findByEmail($email, $conn)) {
                 //verifica a password recebida com a password guardada na base de dados
                 
-                if(){
+                if(){ // Falta implemetar
                     echo "Seja bem vindo!";
                 } else{
                     echo "Email ou Password inválidos!";
