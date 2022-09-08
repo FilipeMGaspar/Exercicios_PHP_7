@@ -15,3 +15,11 @@ body {
     background: #eaf6ff;
 }
 
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 25px 25px 50px rgba(9, 148, 255, 0.25), -10px -10px 30px rgba(9, 148, 255, 0.1), inset -5px -5px 15px rgba(9, 148, 255, 0.5);
+}
