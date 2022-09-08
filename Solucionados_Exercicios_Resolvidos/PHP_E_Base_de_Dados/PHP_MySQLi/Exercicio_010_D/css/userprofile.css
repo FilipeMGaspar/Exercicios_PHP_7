@@ -35,11 +35,17 @@ body {
 }
 
 .card .msg {
-    padding: 2px;
+    padding: 3px;
 }
 
 .card .msg p {
-    font-size: 13px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.card .msg p.sucesso {
+    color: rgb(11, 88, 1);
+    background: rgb(189, 245, 181);
 }
 
 .card .imgBx img {
