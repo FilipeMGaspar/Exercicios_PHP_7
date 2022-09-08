@@ -161,3 +161,26 @@ form .field input[type="submit"] {
     cursor: pointer;
  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
 }
+
+/* Sistema de mensagens */
+.wrapper .msg {
+    padding: 2px;
+    text-align: center;
+}
+
+.wrapper .msg p {
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.wrapper .msg p.sucesso {
+    color: rgb(11, 88, 1);
+    background: rgb(189, 245, 181);
+    border: 1px solid rgb(28, 199, 5);
+}
+
+.wrapper .msg p.erro {
+    color: rgb(88, 1, 1);
+    background: rgb(253, 136, 136);
+}
