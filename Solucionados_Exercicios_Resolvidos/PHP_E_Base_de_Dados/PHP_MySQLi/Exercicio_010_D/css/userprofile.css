@@ -65,5 +65,27 @@ body {
 }
 
 .card .content .sci {
-    
+    position: relative;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.card .content .sci li {
+    list-style: none;
+}
+
+.card .content .sci li a {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: #fff;
+    color: #0994ff;
+    font-size: 1.15em;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(9, 148, 255, 0.25), -2px -2px 5px rgba(9, 148, 255, 0.1), inset -2px -2px 5px rgba(9, 148, 255, 0.5);
 }
