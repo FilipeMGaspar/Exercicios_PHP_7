@@ -52,7 +52,12 @@ body {
 }
 
 .card .msg p.logOut a {
+    font-size: 1.2em;
     text-decoration: none;
+}
+
+.card .msg p.logOut a:hover {
+    text-decoration: underline;
 }
 
 .card .msg p.sucesso {
