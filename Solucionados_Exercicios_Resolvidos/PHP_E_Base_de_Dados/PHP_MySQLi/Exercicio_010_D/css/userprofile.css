@@ -45,6 +45,12 @@ body {
     border-radius: 6px;
 }
 
+.card .msg p.logOut {
+    padding: 0;
+    margin-top: -8px;
+    margin-bottom: 2px;
+}
+
 .card .msg p.sucesso {
     color: rgb(11, 88, 1);
     background: rgb(189, 245, 181);
