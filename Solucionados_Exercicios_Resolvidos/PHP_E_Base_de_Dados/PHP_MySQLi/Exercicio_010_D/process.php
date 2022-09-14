@@ -26,7 +26,8 @@
 
                 //verifica a password recebida com a password guardada na base de dados
                 if (testaPassHash($pass, $resultado["password"])) {
-                    echo "<br>Seja bem vindo!";
+                    //echo "<br>Seja bem vindo!";
+                    header("Location: " . "userprofile.html"); // Redireciona a página
                 } else {
                     echo "Login inálido! Email ou password incorretos!";
                 }
