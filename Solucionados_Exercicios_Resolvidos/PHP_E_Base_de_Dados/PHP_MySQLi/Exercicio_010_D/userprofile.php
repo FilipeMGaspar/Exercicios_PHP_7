@@ -1,8 +1,7 @@
 <?php
     session_start();
 
-    require_once "configs/liga.php";
-    require_once "configs/funcoes.php";
+    require_once "configs/liga.php";    
 ?>
 
 <!DOCTYPE html>
