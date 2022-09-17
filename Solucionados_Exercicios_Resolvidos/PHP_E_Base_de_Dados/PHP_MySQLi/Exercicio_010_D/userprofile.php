@@ -36,7 +36,7 @@
    <div class="card">
         
         <div class="msg">
-            <p class="logOut"><a href="logout.php">Sair</a></p>
+            <p class="logOut"><a href="logout.php"> Sair <i class="fa-solid fa-right-to-bracket"></i></a></p>
             <?php if(!empty($_SESSION["msg"])): ?>
             <p class="<?= $_SESSION["tipo"] ?>"><?= $_SESSION["msg"] ?></p>
             <?php endif; ?>
