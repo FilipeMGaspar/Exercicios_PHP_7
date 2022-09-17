@@ -34,12 +34,14 @@ session_start();
                 } else {
                     //echo "Login inálido! Email ou password incorretos!";
                     $_SESSION["msg"] = "Login inálido! Email ou password incorretos!";
+                    $_SESSION["tipo"] = "erro";
                     header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
                 }
 
            } else {
                 //echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
                 $_SESSION["msg"] = "Email ou password incorretos!"; 
+                $_SESSION["tipo"] = "erro";
                 header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
            }
 
@@ -50,6 +52,7 @@ session_start();
             if (findByEmail($email, $conn)) {
                 //echo "Teste outro Email ou password!"; // Retorna erro de conta ou password
                 $_SESSION["msg"] = "Teste outro Email ou password!";
+                $_SESSION["tipo"] = "erro";
                 header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
            } else {
                 
@@ -63,17 +66,17 @@ session_start();
                         $stmt->execute();    
                         
                         $_SESSION["msg"] = "Dados registados com sucesso!"; 
+                        $_SESSION["tipo"] = "sucesso";
 
                         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                     } catch (Exception $e){
                         $error = $e->getMessage();
-                       // $_SESSION["msg"] = "Não foi possivel registar os dados!";
-                       // $_SESSION["type"] = "erro";
                     }                    
                    
                 } else {
                     //echo "As passwords não correspondem!"; 
                     $_SESSION["msg"] = "As passwords não correspondem!";
+                    $_SESSION["tipo"] = "erro";
                     header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
                 }
                 
@@ -82,5 +85,6 @@ session_start();
 
     } else {
         $_SESSION["msg"] = "Formulário desconhecido!";
+        $_SESSION["tipo"] = "erro";
         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
     }
