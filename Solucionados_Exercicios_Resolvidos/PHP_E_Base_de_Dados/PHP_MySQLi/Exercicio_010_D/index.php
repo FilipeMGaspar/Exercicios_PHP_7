@@ -14,7 +14,9 @@
 <body>
     <div class="wrapper">
         <div class="msg">
-            <p class="erro">Texto Aqui, Mensagens dos sistema!</p>
+            <?php if(!empty($_SESSION["msg"])): ?>
+            <p class="<?= $_SESSION["tipo"] ?>"><?= $_SESSION["msg"] ?></p>
+            <?php endif; ?>
         </div>
 
         <div class="title-text">
@@ -79,6 +81,15 @@
             </div>
         </div>
     </div>
+
+    <?php 
+        if(!empty($_SESSION["msg"])) {
+            $_SESSION["msg"] = "";
+            $_SESSION["tipo"] = "";
+        }
+
+        session_unset();
+   ?>
 
     <!-- javascript -->
     <script src="js/script.js"></script>
