@@ -5,6 +5,7 @@
      unset($conn);
      unset($stmt);
 
-     session_unset();
 
-     header("Location: " . "index.html"); // Redireciona a página
+     $_SESSION["msg"] = "Logout efectuado com sucesso!"; 
+     $_SESSION["tipo"] = "sucesso";
+     header("Location: " . "index.php"); // Redireciona a página
