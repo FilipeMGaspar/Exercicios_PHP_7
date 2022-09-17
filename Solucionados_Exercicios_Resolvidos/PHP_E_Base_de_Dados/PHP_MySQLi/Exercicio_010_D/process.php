@@ -21,8 +21,6 @@ session_start();
                     $stmt->execute();
                     $dados = $stmt->get_result();
                     $resultado = $dados->fetch_assoc();
-                    $stmt->close();
-                    $conn->close();
                 } catch (Exception $e){
                     $error = $e->getMessage();
                 } 
@@ -59,11 +57,8 @@ session_start();
 
                     try {           
                         $stmt->execute();    
-                        //echo "Dados registados com sucesso!";  
                         
                         $_SESSION["msg"] = "Dados registados com sucesso!"; 
-                        $stmt->close();
-                        $conn->close();   
 
                         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                     } catch (Exception $e){
