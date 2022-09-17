@@ -1,5 +1,8 @@
 <?php
     session_start();
+
+    require_once "configs/liga.php";
+    require_once "configs/funcoes.php";
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +57,9 @@
         }
 
         session_unset();
+
+        unset($stmt);
+        unset($conn);
    ?>
 </body>
 </html>
