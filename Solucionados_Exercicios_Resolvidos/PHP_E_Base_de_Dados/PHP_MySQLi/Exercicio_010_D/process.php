@@ -33,11 +33,13 @@ session_start();
                 } else {
                     //echo "Login inálido! Email ou password incorretos!";
                     $_SESSION["msg"] = "Login inálido! Email ou password incorretos!";
+                    header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
                 }
 
            } else {
                 //echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
                 $_SESSION["msg"] = "Email ou password incorretos!"; 
+                header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
            }
 
         }
@@ -47,6 +49,7 @@ session_start();
             if (findByEmail($email, $conn)) {
                 //echo "Teste outro Email ou password!"; // Retorna erro de conta ou password
                 $_SESSION["msg"] = "Teste outro Email ou password!";
+                header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
            } else {
                 
                 if($pass === $confirmPass) {
