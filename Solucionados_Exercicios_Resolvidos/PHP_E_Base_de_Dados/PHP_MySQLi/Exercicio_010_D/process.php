@@ -20,6 +20,8 @@
                     $stmt->execute();
                     $dados = $stmt->get_result();
                     $resultado = $dados->fetch_assoc();
+                    $stmt->close();
+                    $conn->close();
                 } catch (Exception $e){
                     $error = $e->getMessage();
                 } 
@@ -52,7 +54,9 @@
 
                     try {           
                         $stmt->execute();    
-                        echo "Dados registados com sucesso!";       
+                        echo "Dados registados com sucesso!";    
+                        $stmt->close();
+                        $conn->close();   
                     } catch (Exception $e){
                         $error = $e->getMessage();
                        // $_SESSION["msg"] = "Não foi possivel registar os dados!";
