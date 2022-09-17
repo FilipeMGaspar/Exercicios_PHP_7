@@ -18,7 +18,9 @@
         
         <div class="msg">
             <p class="logOut"><a href="logout.php">Sair</a></p>
-            <p class="erro">Mensagens aqui, grande e pequena!</p>
+            <?php if(!empty($_SESSION["msg"])): ?>
+            <p class="erro"><?= $_SESSION["msg"] ?></p>
+            <?php endif; ?>
         </div>
 
         <div class="imgBx">
@@ -40,5 +42,11 @@
         </div>
 
    </div> 
+
+   <?php 
+        if(!empty($_SESSION["msg"])) {
+            $_SESSION["msg"] = "";
+        }
+   ?>
 </body>
 </html>
