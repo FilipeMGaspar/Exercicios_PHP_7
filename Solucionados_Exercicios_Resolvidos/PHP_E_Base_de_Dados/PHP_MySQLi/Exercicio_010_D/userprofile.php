@@ -3,6 +3,18 @@
 
     require_once "configs/liga.php";    
     $id = $_GET["id"];
+
+    $stmt = $conn->prepare("SELECT email, password FROM utilizadores WHERE  idUsers = ? LIMIT 1");
+    $stmt->bind_param("s", $id);
+    
+    try {
+        $stmt->execute();
+        $dados = $stmt->get_result();
+        $resultado = $dados->fetch_assoc();
+    } catch (Exception $e){
+        $error = $e->getMessage();
+    } 
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +50,7 @@
         <div class="content">
             <div>
                 <h3>Maureen Smith<br><span>Creative Designer</span></h3>
-                <p><strong>Email:</strong> mail@mail.mai.pt <?= $id ?></p>
+                <p><strong>Email:</strong> <?= $resultado["email"] ?></p>
 
                 <ul class="sci">
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
