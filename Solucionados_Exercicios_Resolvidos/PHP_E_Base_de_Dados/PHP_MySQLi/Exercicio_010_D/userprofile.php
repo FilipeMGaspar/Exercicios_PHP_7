@@ -50,7 +50,10 @@
    <?php 
         if(!empty($_SESSION["msg"])) {
             $_SESSION["msg"] = "";
+            $_SESSION["tipo"] = "";
         }
+
+        session_unset();
    ?>
 </body>
 </html>
