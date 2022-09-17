@@ -1,4 +1,5 @@
 <?php
+session_start();
     require_once "configs/liga.php";
     require_once "configs/funcoes.php";
 
@@ -29,13 +30,16 @@
                 //verifica a password recebida com a password guardada na base de dados
                 if (testaPassHash($pass, $resultado["password"])) {
                     //echo "<br>Seja bem vindo!";
+                    $_SESSION["msg"] = "Seja bem vindo!";
                     header("Location: " . "userprofile.html"); // Redireciona a página
                 } else {
-                    echo "Login inálido! Email ou password incorretos!";
+                    //echo "Login inálido! Email ou password incorretos!";
+                    $_SESSION["msg"] = "Login inálido! Email ou password incorretos!";
                 }
 
            } else {
-                echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
+                //echo "Email ou password incorretos! <br> Se não tem conta crie uma!"; 
+                $_SESSION["msg"] = "Email ou password incorretos!"; 
            }
 
         }
@@ -43,7 +47,8 @@
         if($type === "signup") {
 
             if (findByEmail($email, $conn)) {
-                echo "Teste outro Email ou password!"; // Retorna erro de conta ou password
+                //echo "Teste outro Email ou password!"; // Retorna erro de conta ou password
+                $_SESSION["msg"] = "Teste outro Email ou password!";
            } else {
                 
                 if($pass === $confirmPass) {
@@ -54,9 +59,13 @@
 
                     try {           
                         $stmt->execute();    
-                        echo "Dados registados com sucesso!";    
+                        //echo "Dados registados com sucesso!";  
+                        
+                        $_SESSION["msg"] = "Dados registados com sucesso!"; 
                         $stmt->close();
                         $conn->close();   
+
+                        header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
                     } catch (Exception $e){
                         $error = $e->getMessage();
                        // $_SESSION["msg"] = "Não foi possivel registar os dados!";
@@ -64,13 +73,15 @@
                     }                    
                    
                 } else {
-                    echo "As passwords não correspondem!"; 
+                    //echo "As passwords não correspondem!"; 
+                    $_SESSION["msg"] = "As passwords não correspondem!";
+                    header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página 
                 }
                 
            }
         }
 
     } else {
-        // $_SESSION["msg"] = "Formulário desconhecido!";
+        $_SESSION["msg"] = "Formulário desconhecido!";
         header("Location: " . $_SERVER["HTTP_REFERER"]); // Redireciona a página
     }
