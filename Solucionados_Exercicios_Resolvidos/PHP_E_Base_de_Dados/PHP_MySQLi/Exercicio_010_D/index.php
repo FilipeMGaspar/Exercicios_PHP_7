@@ -89,6 +89,9 @@
         }
 
         session_unset();
+
+        unset($stmt);
+        unset($conn);        
    ?>
 
     <!-- javascript -->
