@@ -29,7 +29,7 @@ session_start();
                 if (testaPassHash($pass, $resultado["password"])) {
                     //echo "<br>Seja bem vindo!";
                     $_SESSION["msg"] = "Seja bem vindo!";
-                    header("Location: " . "userprofile.html"); // Redireciona a página
+                    header("Location: " . "userprofile.php"); // Redireciona a página
                 } else {
                     //echo "Login inálido! Email ou password incorretos!";
                     $_SESSION["msg"] = "Login inálido! Email ou password incorretos!";
