@@ -14,7 +14,7 @@ session_start();
 
            if (findByEmail($email, $conn)) {
                 
-                $stmt = $conn->prepare("SELECT email, password FROM utilizadores WHERE  email = ? LIMIT 1");
+                $stmt = $conn->prepare("SELECT 	idUsers, email, password FROM utilizadores WHERE  email = ? LIMIT 1");
                 $stmt->bind_param("s", $email);
                 
                 try {
@@ -30,7 +30,7 @@ session_start();
                     //echo "<br>Seja bem vindo!";
                     $_SESSION["msg"] = "Seja bem vindo!";
                     $_SESSION["tipo"] = "sucesso";
-                    header("Location: " . "userprofile.php"); // Redireciona a página
+                    header("Location: " . "userprofile.php?id=" . $resultado["idUsers"]); // Redireciona a página
                 } else {
                     //echo "Login inálido! Email ou password incorretos!";
                     $_SESSION["msg"] = "Login inálido! Email ou password incorretos!";

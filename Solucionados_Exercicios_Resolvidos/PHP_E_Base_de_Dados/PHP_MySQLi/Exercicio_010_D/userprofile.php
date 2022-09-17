@@ -2,6 +2,7 @@
     session_start();
 
     require_once "configs/liga.php";    
+    $id = $_GET["id"];
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +38,7 @@
         <div class="content">
             <div>
                 <h3>Maureen Smith<br><span>Creative Designer</span></h3>
-                <p><strong>Email:</strong> mail@mail.mai.pt</p>
+                <p><strong>Email:</strong> mail@mail.mai.pt <?= $id ?></p>
 
                 <ul class="sci">
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
