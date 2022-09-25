@@ -78,4 +78,15 @@ header nav .menu ul li {
     color: #04BFBF;
     text-transform: uppercase;
 }
-/*#034b52
+
+header nav .menu ul li a {
+    text-decoration: none;
+    color: #04BFBF;
+    transition: 0.5s;
+}
+
+header nav .menu ul li a:hover {
+    color: #046161;
+    border-bottom: 2px solid #04BFBF;
+    letter-spacing: 1.5px;
+}
