@@ -18,7 +18,9 @@ header {
     position: relative;
     height: 200px;
     width: 1200px;
-    background: blue;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: rgba(107, 107, 151, 0.568);
 }
 
 header nav {
@@ -45,13 +47,13 @@ header nav .logo h3 {
 header nav .logo p {
     font-family: 'Hachi Maru Pop';
     font-size: 1.2em;
-    margin-left: 10px;
+    margin-left: -30px;
 }
 
 header nav .logo .imgLogo {
     position: relative;
     width: 200px;
-    height: 220px;
+    height: 150px;
     padding-left: 20px;
     margin-bottom: 15px;
 }
@@ -59,6 +61,6 @@ header nav .logo .imgLogo {
 header nav .menu {
     display: flex;
     position: absolute;
-    right: 150px;
-    top: 35px;
+    right: 250px;
+    bottom: 35px;
 }
