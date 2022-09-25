@@ -56,6 +56,6 @@ header nav .logo .imgLogo {
 header nav .menu {
     display: flex;
     position: absolute;
-    right: 20px;
-    top: 15px;
+    right: 150px;
+    top: 35px;
 }
