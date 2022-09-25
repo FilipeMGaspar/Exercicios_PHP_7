@@ -47,7 +47,8 @@ header nav .logo h3 {
 header nav .logo p {
     font-family: 'Hachi Maru Pop';
     font-size: 1.2em;
-    margin-left: -30px;
+    margin-top: 6px;
+    margin-left: -6px;
 }
 
 header nav .logo .imgLogo {
